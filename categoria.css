@@ -1,0 +1,494 @@
+/*
+ * SanJose Florería — Pereira · PÁGINAS DE CATEGORÍA / SERVICIO
+ * REDISEÑO "LUXURY FLORAL" · solo estilo (estructura intacta)
+ * Cargan junto con styles.css (navbar/footer). Color de marca: #BF9460
+ */
+
+:root {
+    --primary: #BF9460;
+    --secondary: #F2CEA2;
+    --accent: #8C5F37;
+    --highlight: #F2C9C9;
+    --background: #F2F2F2;
+    --text-dark: #333;
+    --text-light: #555;
+    --white: #fff;
+    --primary-deep: #8F6F48;
+
+    --ink: #14101B;
+    --ink-2: #221B2E;
+    --warm-white: #FDFCFB;
+    --cream: #F8F5F0;
+    --brand-tint: #F6EFE2;
+    --gold: #C9A86A;
+    --gold-dark: #A8853F;
+    --text: #2B2433;
+    --text-soft: #6B6375;
+    --hairline: rgba(22, 18, 28, 0.09);
+    --wa: #1EBE5D;
+    --wa-dark: #169549;
+
+    --font-title: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   HERO NOCTURNO de categoría / servicio (sin imagen externa)
+   ───────────────────────────────────────────────────────────── */
+.category-hero,
+.service-hero {
+    height: 50vh;
+    background: radial-gradient(75% 130% at 50% 0%, var(--ink-2), var(--ink));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--warm-white);
+    margin-top: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Marco dorado interior */
+.category-hero::before,
+.service-hero::before {
+    content: '';
+    position: absolute;
+    inset: 22px;
+    border: 1px solid var(--gold-soft, rgba(201, 168, 106, 0.22));
+    pointer-events: none;
+}
+
+.category-hero-content,
+.service-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.category-hero-content h1,
+.service-hero-content h1 {
+    font-family: var(--font-title);
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* Línea dorada con glow bajo el H1 */
+.category-hero-content h1::after,
+.service-hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+    box-shadow: 0 0 14px rgba(201, 168, 106, 0.7);
+}
+
+.category-hero-content p,
+.service-hero-content h1 + p {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(0.98rem, 2.4vw, 1.2rem);
+    color: rgba(253, 252, 251, 0.78);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CONTENIDO
+   ───────────────────────────────────────────────────────────── */
+.service-content {
+    padding: 88px 0;
+    background: var(--warm-white);
+}
+
+.content-section {
+    margin-bottom: 3.2rem;
+}
+
+.content-section h2 {
+    font-family: var(--font-title);
+    font-size: clamp(1.7rem, 2.6vw, 2.1rem);
+    color: var(--text);
+    margin-bottom: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.content-section p {
+    font-size: 1.02rem;
+    line-height: 1.9;
+    color: var(--text-soft);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+/* Beneficios — borde izquierdo de marca → dorado al hover */
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.benefit-item {
+    background: var(--warm-white);
+    padding: 1.6rem;
+    border: 1px solid var(--hairline);
+    border-left: 3px solid var(--primary);
+    border-radius: 14px;
+    box-shadow: 0 8px 26px rgba(20, 16, 27, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-left-color 0.35s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-4px);
+    border-left-color: var(--gold);
+    box-shadow: 0 14px 34px rgba(20, 16, 27, 0.1);
+}
+
+.benefit-item h3 {
+    font-family: var(--font-title);
+    color: var(--text);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.pricing-section {
+    background: var(--brand-tint);
+    padding: 2.2rem;
+    border-radius: 18px;
+    margin: 2rem 0;
+    border: 1px solid var(--hairline);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.price-item {
+    background: var(--warm-white);
+    padding: 1.6rem;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid var(--hairline);
+    box-shadow: 0 6px 20px rgba(20, 16, 27, 0.05);
+}
+
+.price-item h4 {
+    font-family: var(--font-title);
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.price {
+    font-family: var(--font-title);
+    color: var(--primary-deep);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.areas-section {
+    background: var(--cream);
+    padding: 2.2rem;
+    border-radius: 18px;
+    margin: 2rem 0;
+    border: 1px solid var(--hairline);
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.area-item {
+    background: var(--warm-white);
+    padding: 1rem;
+    border-radius: 999px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    color: var(--primary-deep);
+    border: 1px solid var(--hairline);
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.area-item:hover {
+    border-color: var(--gold);
+    color: var(--text);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CTA — salón nocturno con marco dorado interior y florón
+   ───────────────────────────────────────────────────────────── */
+.cta-section {
+    background: radial-gradient(80% 140% at 50% 0%, var(--ink-2), var(--ink));
+    color: var(--warm-white);
+    padding: 3.4rem 2rem;
+    border-radius: 22px;
+    text-align: center;
+    margin: 3.2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 22px;
+    border: 1px solid rgba(201, 168, 106, 0.22);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.cta-section h2 {
+    font-family: var(--font-title);
+    color: var(--warm-white);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2::before {
+    content: '\2766';
+    display: block;
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: rgba(253, 252, 251, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+/* Botón blanco → dorado al hover */
+.cta-button-large {
+    background: var(--warm-white);
+    color: var(--ink);
+    border: none;
+    padding: 17px 48px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.cta-button-large:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--ink);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(201, 168, 106, 0.4);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BREADCRUMB — sello editorial
+   ───────────────────────────────────────────────────────────── */
+.breadcrumb {
+    background: var(--cream);
+    padding: 16px 0;
+    margin-top: 80px;
+    border-bottom: 1px solid var(--hairline);
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.breadcrumb-nav a {
+    color: var(--primary-deep);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--gold-dark);
+}
+
+.breadcrumb-nav span {
+    color: var(--text-soft);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ÁREAS DE SERVICIO (en páginas de categoría)
+   ───────────────────────────────────────────────────────────── */
+.service-areas {
+    padding: 88px 0;
+    background: var(--brand-tint);
+}
+
+.service-areas .section-title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 3.4vw, 2.6rem);
+    font-weight: 500;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 3rem;
+    letter-spacing: -0.01em;
+    position: relative;
+    padding-bottom: 1.1rem;
+}
+
+.service-areas .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.service-areas .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+}
+
+.area-card {
+    background: var(--warm-white);
+    padding: 1.6rem;
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    box-shadow: 0 8px 26px rgba(20, 16, 27, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    text-align: center;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 38px rgba(20, 16, 27, 0.1);
+}
+
+.area-name {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.area-description {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .category-hero,
+    .service-hero {
+        height: 42vh;
+        margin-top: 0px;
+    }
+
+    .category-hero::before,
+    .service-hero::before {
+        inset: 14px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-section p {
+        font-size: 1rem;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .breadcrumb {
+        margin-top: 70px;
+    }
+
+    .service-areas .areas-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-areas .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ACCESIBILIDAD
+   ───────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}

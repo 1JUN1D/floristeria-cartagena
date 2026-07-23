@@ -1,0 +1,814 @@
+/* ═══════════════════════════════════════════════════════════════
+   LANDING TEMPLATE CSS — SanJose Florería Pereira
+   REDISEÑO "LUXURY FLORAL" · solo estilo (estructura intacta)
+   Un solo archivo para todas las landing pages de Google Ads
+   Color de marca conservado: #BF9460 · variante profunda #8F6F48
+   ═══════════════════════════════════════════════════════════════ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #BF9460;
+    --secondary: #F2CEA2;
+    --accent: #8C5F37;
+    --primary-deep: #8F6F48;
+
+    --ink: #14101B;
+    --ink-2: #221B2E;
+    --warm-white: #FDFCFB;
+    --cream: #F8F5F0;
+    --brand-tint: #F6EFE2;
+    --gold: #C9A86A;
+    --gold-dark: #A8853F;
+    --text: #2B2433;
+    --text-soft: #6B6375;
+    --hairline: rgba(22, 18, 28, 0.09);
+    --wa: #1EBE5D;
+    --wa-dark: #169549;
+
+    --font-title: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--text);
+    background: var(--warm-white);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   HERO NOCTURNO — marco dorado interior + línea de oro bajo H1
+   ───────────────────────────────────────────────────────────── */
+.hero {
+    background: radial-gradient(75% 130% at 50% 0%, var(--ink-2), var(--ink));
+    padding: 3.5rem 0 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(201, 168, 106, 0.22);
+    pointer-events: none;
+    background: radial-gradient(ellipse at 30% 40%, rgba(201, 168, 106, 0.12) 0%, transparent 70%);
+}
+
+.hero .logo img {
+    height: 62px;
+    width: auto;
+    margin-bottom: 1.1rem;
+    position: relative;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--gold);
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    color: var(--warm-white);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    line-height: 1.18;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 1rem;
+}
+
+.hero h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+    box-shadow: 0 0 14px rgba(201, 168, 106, 0.7);
+}
+
+.hero .subtitle {
+    font-family: var(--font-body);
+    font-weight: 300;
+    color: rgba(253, 252, 251, 0.8);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta-hero {
+    display: inline-block;
+    margin-top: 1.6rem;
+    background: var(--wa);
+    color: white;
+    text-decoration: none;
+    padding: 15px 42px;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 8px 24px rgba(30, 190, 93, 0.4);
+    cursor: pointer;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta-hero:hover {
+    transform: translateY(-3px);
+    background: var(--wa-dark);
+    box-shadow: 0 12px 30px rgba(30, 190, 93, 0.5);
+}
+
+.decorative-line {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    box-shadow: 0 0 14px rgba(201, 168, 106, 0.6);
+    margin: 1.4rem auto;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BENEFICIOS — iconos en círculo con anillo dorado
+   ───────────────────────────────────────────────────────────── */
+.benefits {
+    padding: 3rem 0;
+    background: var(--cream);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.benefit-item {
+    padding: 1.6rem 1rem;
+}
+
+.benefit-icon {
+    font-size: 1.5rem;
+    margin: 0 auto 0.8rem;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--warm-white);
+    box-shadow: 0 0 0 1px var(--gold);
+}
+
+.benefit-item h3 {
+    font-family: var(--font-title);
+    color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.benefit-item p {
+    color: var(--text-soft);
+    font-size: 0.94rem;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TÍTULOS DE SECCIÓN — línea dorada de 64px
+   ───────────────────────────────────────────────────────────── */
+.section-title {
+    text-align: center;
+    padding: 2.4rem 0 0.5rem 0;
+}
+
+.section-title h2 {
+    font-family: var(--font-title);
+    color: var(--text);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.9rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.section-title p {
+    color: var(--text-soft);
+    font-size: 1.02rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PRODUCTOS — vitrinas de arco
+   ───────────────────────────────────────────────────────────── */
+.catalog {
+    padding: 2.4rem 0 4.5rem 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.6rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: var(--warm-white);
+    border: 1px solid var(--hairline);
+    border-radius: 220px 220px 18px 18px;
+    overflow: hidden;
+    padding: 12px 12px 16px;
+    box-shadow: 0 20px 50px rgba(20, 16, 27, 0.07);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    animation: fadeInUp 0.6s ease-out both;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 30px 62px rgba(20, 16, 27, 0.13);
+}
+
+.product-image {
+    order: 1;
+    width: 100%;
+    aspect-ratio: 1 / 1.12;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    cursor: zoom-in;
+    border-radius: 210px 210px 14px 14px;
+    box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.55);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.zoom-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(20, 16, 27, 0.7);
+    color: var(--gold);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 11px;
+    border-radius: 999px;
+    border: 1px solid rgba(201, 168, 106, 0.5);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-image:hover .zoom-hint {
+    opacity: 1;
+}
+
+/* Categoría y código — pastillas centradas al pie del card */
+.category-badge {
+    order: 4;
+    align-self: center;
+    background: rgba(20, 16, 27, 0.9);
+    color: var(--gold);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.62rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border: 1px solid rgba(201, 168, 106, 0.5);
+}
+
+.product-code {
+    order: 3;
+    align-self: center;
+    background: transparent;
+    color: var(--primary-deep);
+    border: 1px solid var(--gold);
+    padding: 5px 13px;
+    border-radius: 999px;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    font-family: var(--font-body);
+    pointer-events: none;
+}
+
+/* === Tarjeta destacada estacional — recolorada sobria (oro/tinta) === */
+.mothers-day-card {
+    border: 1px solid var(--gold) !important;
+    background: var(--brand-tint) !important;
+    box-shadow: 0 20px 50px rgba(20, 16, 27, 0.08) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.mothers-day-card:hover {
+    box-shadow: 0 30px 62px rgba(20, 16, 27, 0.14) !important;
+    transform: translateY(-11px) !important;
+}
+
+.mothers-day-card::after {
+    content: '\2766 D\00CD A DE LA MADRE';
+    position: absolute;
+    top: 26px;
+    left: -44px;
+    background: var(--ink);
+    color: var(--gold);
+    padding: 6px 50px;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    transform: rotate(-45deg);
+    z-index: 5;
+    box-shadow: 0 3px 10px rgba(20, 16, 27, 0.3);
+    pointer-events: none;
+}
+
+.mothers-day-card .product-title {
+    color: var(--text);
+}
+
+.mothers-day-card .product-price {
+    color: var(--primary-deep);
+    font-weight: 600;
+}
+
+.mothers-day-card .product-button {
+    background: var(--wa) !important;
+    box-shadow: 0 6px 16px rgba(30, 190, 93, 0.3);
+}
+
+.mothers-day-card .product-button:hover {
+    background: var(--wa-dark) !important;
+}
+
+.mothers-badge {
+    background: var(--ink) !important;
+    color: var(--gold) !important;
+    font-weight: 500;
+    border: 1px solid rgba(201, 168, 106, 0.5) !important;
+}
+
+.product-content {
+    order: 2;
+    width: 100%;
+    padding: 1.9rem 1.4rem 0.4rem;
+    text-align: center;
+}
+
+.product-title {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+.product-title::after {
+    content: '\00B7 \2766 \00B7';
+    display: block;
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    margin-top: 0.4rem;
+}
+
+.product-description {
+    font-size: 0.98rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 1.3rem;
+    min-height: 70px;
+}
+
+.product-price {
+    font-family: var(--font-title);
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--primary-deep);
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+
+.product-price::before {
+    content: 'Desde';
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin-bottom: 0.2rem;
+}
+
+.product-button {
+    width: 100%;
+    background: var(--wa);
+    color: white;
+    border: none;
+    padding: 14px 0;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.product-button:hover {
+    background: var(--wa-dark);
+    transform: translateY(-2px);
+}
+
+/* ── Tarjeta Especial Personalizado — sobria ──────────────── */
+.personalizado-card {
+    background: var(--brand-tint) !important;
+    border: 1px solid var(--gold) !important;
+}
+
+.personalizado-card .product-title {
+    color: var(--text);
+}
+
+.personalizado-card .product-price {
+    color: var(--primary-deep);
+}
+
+.personalizado-card .product-button {
+    background: var(--wa);
+}
+
+.personalizado-card .product-button:hover {
+    background: var(--wa-dark);
+}
+
+.personalizado-card .category-badge {
+    background: var(--ink);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CTA FINAL — franja de tinta con texto dorado
+   ───────────────────────────────────────────────────────────── */
+.cta-final {
+    background: radial-gradient(80% 160% at 50% 0%, var(--ink-2), var(--ink));
+    padding: 3.4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-final::before {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(201, 168, 106, 0.22);
+    pointer-events: none;
+}
+
+.cta-final h2 {
+    font-family: var(--font-title);
+    color: var(--warm-white);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-final p {
+    color: rgba(253, 252, 251, 0.8);
+    font-size: 1.05rem;
+    font-weight: 300;
+    margin-bottom: 1.6rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-final .cta-hero {
+    display: inline-block;
+    background: var(--wa);
+    color: white;
+    text-decoration: none;
+    padding: 15px 42px;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 8px 24px rgba(30, 190, 93, 0.4);
+    cursor: pointer;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-final .cta-hero:hover {
+    transform: translateY(-3px);
+    background: var(--wa-dark);
+    box-shadow: 0 12px 30px rgba(30, 190, 93, 0.5);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LIGHTBOX — oscuro con blur y marco dorado
+   ───────────────────────────────────────────────────────────── */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 16, 27, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox img {
+    max-width: min(92vw, 580px);
+    max-height: 78vh;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px var(--gold), 0 8px 40px rgba(0, 0, 0, 0.6);
+    object-fit: contain;
+    animation: lbFadeIn 0.28s ease;
+}
+
+@keyframes lbFadeIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#lightbox-caption {
+    color: var(--gold);
+    font-size: 13px;
+    margin-top: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    background: rgba(201, 168, 106, 0.16);
+    border: 1px solid rgba(201, 168, 106, 0.4);
+    color: var(--warm-white);
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+#lightbox-close:hover {
+    background: rgba(201, 168, 106, 0.32);
+}
+
+#lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    cursor: zoom-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WHATSAPP FLOTANTE
+   ───────────────────────────────────────────────────────────── */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 1000;
+}
+
+.whatsapp-float a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--wa);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 8px 26px rgba(30, 190, 93, 0.38);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.whatsapp-float a:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--wa-dark);
+    box-shadow: 0 10px 30px rgba(30, 190, 93, 0.5);
+}
+
+/* Halo sutil — solo transform/opacity */
+.whatsapp-float a::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--wa);
+    z-index: -1;
+    animation: waPulse 2.4s infinite;
+}
+
+@keyframes waPulse {
+    0% { transform: scale(1); opacity: 0.45; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   APARICIÓN SUAVE
+   ───────────────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.product-card:nth-child(1) { animation-delay: 0.06s; }
+.product-card:nth-child(2) { animation-delay: 0.1s; }
+.product-card:nth-child(3) { animation-delay: 0.14s; }
+.product-card:nth-child(4) { animation-delay: 0.18s; }
+.product-card:nth-child(5) { animation-delay: 0.22s; }
+.product-card:nth-child(6) { animation-delay: 0.26s; }
+.product-card:nth-child(7) { animation-delay: 0.3s; }
+.product-card:nth-child(8) { animation-delay: 0.34s; }
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+
+    .product-card {
+        margin: 0 6px;
+    }
+
+    .product-content {
+        padding: 1.6rem 1.2rem 1.7rem;
+    }
+
+    .product-title {
+        font-size: 1.4rem;
+    }
+
+    .product-description {
+        font-size: 0.95rem;
+        min-height: 60px;
+    }
+
+    .product-price {
+        font-size: 1.65rem;
+    }
+
+    .hero {
+        padding: 2.4rem 0 2.2rem 0;
+    }
+
+    .hero::before {
+        inset: 12px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .whatsapp-float a {
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-float a::after {
+        width: 52px;
+        height: 52px;
+    }
+
+    #lightbox img {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+
+    #lightbox-close {
+        top: 10px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog {
+        padding: 1.6rem 0 3rem 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero .cta-hero,
+    .cta-final .cta-hero {
+        padding: 13px 32px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ACCESIBILIDAD — anula animaciones si se solicita
+   ───────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}

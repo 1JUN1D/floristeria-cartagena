@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo de Flores - TR Florería Cartagena | Ramos y Bouquets</title>
+<meta content="Catálogo completo de ramos y bouquets de TR Florería en Cartagena. Rosas, girasoles, gerberas y arreglos florales con entrega a domicilio en Cartagena." name="description"/>
+<link href="/assets/logo.webp" rel="shortcut icon" type="image/x-icon"/>
+<!-- Meta Pixel Code -->
+<script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1072535878345850');
+        fbq('track', 'PageView');
+    </script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=1072535878345850&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2HV3B0TES2"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2HV3B0TES2');
+    </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17503274952"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17503274952');
+    </script>
+<!-- FUNCIÓN DE TRACKING WHATSAPP PARA GOOGLE ADS -->
+<script>
+        function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            try {
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'engagement',
+                    'event_label': eventLabel,
+                    'page_location': window.location.href
+                });
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17503274952/lA9PCODAu4wbEMiPm5pB',
+                    'event_callback': function() {
+                        window.open(whatsappUrl, '_blank');
+                    }
+                });
+                setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 300);
+            } catch (error) {
+                console.error('Error en tracking:', error);
+                window.open(whatsappUrl, '_blank');
+            }
+            return false;
+        }
+    </script>
+<link href="catalogo.css" rel="stylesheet"/>
+<style>
+        /* ── Zoom hint ─────────────────────────────────────── */
+        .product-image {
+            position: relative;
+            overflow: hidden;
+        }
+        .zoom-hint {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .product-image:hover .zoom-hint {
+            opacity: 1;
+        }
+        .product-image:hover img {
+            transform: scale(1.04);
+            transition: transform 0.35s ease;
+        }
+        .product-image img {
+            transition: transform 0.35s ease;
+        }
+
+        /* ── Lightbox ───────────────────────────────────────── */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(20,16,27,0.92);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: min(92vw, 580px);
+            max-height: 78vh;
+            border-radius: 12px;
+            box-shadow: 0 0 0 1px #C9A86A, 0 8px 40px rgba(0,0,0,0.6);
+            object-fit: contain;
+            animation: lbFadeIn 0.28s ease;
+        }
+        @keyframes lbFadeIn {
+            from { opacity:0; transform: scale(0.92); }
+            to   { opacity:1; transform: scale(1); }
+        }
+        #lightbox-caption {
+            color: #C9A86A;
+            font-size: 13px;
+            margin-top: 16px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        #lightbox-close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: #fff;
+            font-size: 26px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        #lightbox-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        #lightbox-overlay {
+            position: absolute;
+            inset: 0;
+            cursor: zoom-out;
+        }
+    </style>
+<link href="/dia-del-padre.css" rel="stylesheet"/>
+<script src="/dia-del-padre.js"></script>
+</head>
+<body>
+<!-- Lightbox Modal -->
+<div id="lightbox">
+<div id="lightbox-overlay" onclick="closeLightbox()"></div>
+<button id="lightbox-close" onclick="closeLightbox()" title="Cerrar">✕</button>
+<img alt="" id="lightbox-img" src=""/>
+<p id="lightbox-caption"></p>
+</div>
+<!-- Header -->
+<header class="header">
+<div class="container">
+<div class="logo">
+<img alt="TR Florería Logo" src="assets/logo.webp"/>
+</div>
+<h1>Nuestro Catálogo</h1>
+<p>Ramos y bouquets únicos para cada ocasión especial en Cartagena</p>
+<div class="decorative-line"></div>
+</div>
+</header>
+<!-- Filter Section -->
+<section class="filter-section">
+<div class="container">
+<div class="filter-buttons">
+<button class="filter-btn active" data-category="all">Todos</button>
+<button class="filter-btn" data-category="rosas">Rosas</button>
+<button class="filter-btn" data-category="girasoles">Girasoles</button>
+<button class="filter-btn" data-category="gerberas">Gerberas</button>
+<button class="filter-btn" data-category="especiales">Especiales</button>
+<button class="filter-btn" data-category="canastas">🧺 Canastas</button>
+</div>
+<div class="catalog-search-wrap" style="margin-top:1rem;"><input autocomplete="off" id="catalog-search" placeholder="🔍 Busca por código (ej. 003) o nombre…" style="width:100%;max-width:520px;padding:12px 18px;border:2px solid #BF9460;border-radius:25px;font-size:1rem;outline:none;font-family:Georgia,serif;display:block;margin:0 auto;" type="text"/></div></div>
+</section>
+<!-- Catalog Section -->
+<section class="catalog">
+<div class="container">
+<div class="products-grid">
+<div class="product-card" data-category="especiales" data-code="001" data-name="Canasta Corazón Rojo"><div class="product-code">#001</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto1.webp', 'Canasta Corazón Rojo')" style="cursor:zoom-in;">
+<img alt="Canasta Corazón Rojo" loading="lazy" src="assets/foto1.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Canasta Corazón Rojo</h2>
+<p class="product-description">Encantadora canasta de madera colmada de rosas rojas y follaje dorado, coronada con un alegre globo en forma de corazón. Un detalle cálido y romántico para decir cuánto te importa.</p>
+<div class="product-price">$97,500</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20001%20%E2%80%94%20Hola%2C%20me%20interesa%20Canasta%20Coraz%C3%B3n%20Rojo%20por%20%2497%2C500.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto1.webp', 'producto_001')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="002" data-name="Canasta Sol y Rosas"><div class="product-code">#002</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto2.webp', 'Canasta Sol y Rosas')" style="cursor:zoom-in;">
+<img alt="Canasta Sol y Rosas" loading="lazy" src="assets/foto2.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Canasta Sol y Rosas</h2>
+<p class="product-description">Rústica canasta que combina rosas rojas y girasoles radiantes con un globo decorativo. La mezcla perfecta entre pasión y alegría para sorprender en cualquier ocasión.</p>
+<div class="product-price">$150,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20002%20%E2%80%94%20Hola%2C%20me%20interesa%20Canasta%20Sol%20y%20Rosas%20por%20%24150%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto2.webp', 'producto_002')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="girasoles" data-code="003" data-name="Bouquet Jardín Vibrante"><div class="product-code">#003</div>
+<div class="category-badge">Girasoles</div>
+<div class="product-image" onclick="openLightbox('assets/foto3.webp', 'Bouquet Jardín Vibrante')" style="cursor:zoom-in;">
+<img alt="Bouquet Jardín Vibrante" loading="lazy" src="assets/foto3.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Bouquet Jardín Vibrante</h2>
+<p class="product-description">Ramo lleno de color con girasoles, rosas en tonos fucsia y rosado y toques de gypsophila. Una explosión de vida y frescura envuelta con elegancia.</p>
+<div class="product-price">$181,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20003%20%E2%80%94%20Hola%2C%20me%20interesa%20Bouquet%20Jard%C3%ADn%20Vibrante%20por%20%24181%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto3.webp', 'producto_003')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="girasoles" data-code="004" data-name="Girasol Encanto Rosado"><div class="product-code">#004</div>
+<div class="category-badge">Girasoles</div>
+<div class="product-image" onclick="openLightbox('assets/foto4.webp', 'Girasol Encanto Rosado')" style="cursor:zoom-in;">
+<img alt="Girasol Encanto Rosado" loading="lazy" src="assets/foto4.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Girasol Encanto Rosado</h2>
+<p class="product-description">Bouquet luminoso con un girasol central rodeado de rosas rojas y rosadas sobre una suave envoltura rosa. Un regalo tierno que ilumina el día de quien lo recibe.</p>
+<div class="product-price">$156,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20004%20%E2%80%94%20Hola%2C%20me%20interesa%20Girasol%20Encanto%20Rosado%20por%20%24156%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto4.webp', 'producto_004')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="005" data-name="Esplendor Campestre Premium"><div class="product-code">#005</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto5.webp', 'Esplendor Campestre Premium')" style="cursor:zoom-in;">
+<img alt="Esplendor Campestre Premium" loading="lazy" src="assets/foto5.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Esplendor Campestre Premium</h2>
+<p class="product-description">Imponente arreglo campestre con girasoles, rosas rojas y detalles de chocolate fino. Una pieza generosa y sofisticada pensada para las grandes ocasiones.</p>
+<div class="product-price">$300,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20005%20%E2%80%94%20Hola%2C%20me%20interesa%20Esplendor%20Campestre%20Premium%20por%20%24300%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto5.webp', 'producto_005')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="006" data-name="Cascada de Rosas y Sol"><div class="product-code">#006</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto6.webp', 'Cascada de Rosas y Sol')" style="cursor:zoom-in;">
+<img alt="Cascada de Rosas y Sol" loading="lazy" src="assets/foto6.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Cascada de Rosas y Sol</h2>
+<p class="product-description">Arreglo vertical de gran altura donde las rosas rojas descienden hacia una base de girasoles. Diseño escultórico y elegante que llena de vida cualquier espacio.</p>
+<div class="product-price">$306,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20006%20%E2%80%94%20Hola%2C%20me%20interesa%20Cascada%20de%20Rosas%20y%20Sol%20por%20%24306%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto6.webp', 'producto_006')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="007" data-name="Árbol Floral Encanto"><div class="product-code">#007</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto7.webp', 'Árbol Floral Encanto')" style="cursor:zoom-in;">
+<img alt="Árbol Floral Encanto" loading="lazy" src="assets/foto7.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Árbol Floral Encanto</h2>
+<p class="product-description">Estilizado arreglo en forma de árbol que entrelaza rosas rojas y girasoles sobre una canasta con moño. Una composición armoniosa y llena de detalle.</p>
+<div class="product-price">$156,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20007%20%E2%80%94%20Hola%2C%20me%20interesa%20%C3%81rbol%20Floral%20Encanto%20por%20%24156%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto7.webp', 'producto_007')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="girasoles" data-code="008" data-name="Sol Rosado"><div class="product-code">#008</div>
+<div class="category-badge">Girasoles</div>
+<div class="product-image" onclick="openLightbox('assets/foto8.webp', 'Sol Rosado')" style="cursor:zoom-in;">
+<img alt="Sol Rosado" loading="lazy" src="assets/foto8.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Sol Rosado</h2>
+<p class="product-description">Delicado bouquet con un girasol protagonista, rosas rosadas y verdes envuelto en tonos suaves. Ternura y alegría en una presentación moderna y femenina.</p>
+<div class="product-price">$125,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20008%20%E2%80%94%20Hola%2C%20me%20interesa%20Sol%20Rosado%20por%20%24125%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto8.webp', 'producto_008')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="girasoles" data-code="009" data-name="Trío de Girasoles"><div class="product-code">#009</div>
+<div class="category-badge">Girasoles</div>
+<div class="product-image" onclick="openLightbox('assets/foto9.webp', 'Trío de Girasoles')" style="cursor:zoom-in;">
+<img alt="Trío de Girasoles" loading="lazy" src="assets/foto9.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Trío de Girasoles</h2>
+<p class="product-description">Sencillo y luminoso ramo de tres girasoles acompañados de gypsophila y follaje fresco. El regalo ideal para arrancar sonrisas con naturalidad.</p>
+<div class="product-price">$75,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20009%20%E2%80%94%20Hola%2C%20me%20interesa%20Tr%C3%ADo%20de%20Girasoles%20por%20%2475%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto9.webp', 'producto_009')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="girasoles" data-code="010" data-name="Ramo Radiante de Girasoles"><div class="product-code">#010</div>
+<div class="category-badge">Girasoles</div>
+<div class="product-image" onclick="openLightbox('assets/foto10.webp', 'Ramo Radiante de Girasoles')" style="cursor:zoom-in;">
+<img alt="Ramo Radiante de Girasoles" loading="lazy" src="assets/foto10.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Ramo Radiante de Girasoles</h2>
+<p class="product-description">Alegre ramo de girasoles envuelto en papel elegante con un lazo dorado. Un canto al buen ánimo y a la energía positiva para cualquier momento.</p>
+<div class="product-price">$87,500</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20010%20%E2%80%94%20Hola%2C%20me%20interesa%20Ramo%20Radiante%20de%20Girasoles%20por%20%2487%2C500.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto10.webp', 'producto_010')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="girasoles" data-code="011" data-name="Girasol y Pasión"><div class="product-code">#011</div>
+<div class="category-badge">Girasoles</div>
+<div class="product-image" onclick="openLightbox('assets/foto11.webp', 'Girasol y Pasión')" style="cursor:zoom-in;">
+<img alt="Girasol y Pasión" loading="lazy" src="assets/foto11.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Girasol y Pasión</h2>
+<p class="product-description">Vibrante bouquet que une un girasol central con rosas rojas y astromelias sobre envoltura sobria. El contraste perfecto entre alegría y romance.</p>
+<div class="product-price">$112,500</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20011%20%E2%80%94%20Hola%2C%20me%20interesa%20Girasol%20y%20Pasi%C3%B3n%20por%20%24112%2C500.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto11.webp', 'producto_011')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="012" data-name="Ternura de Girasoles"><div class="product-code">#012</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto12.webp', 'Ternura de Girasoles')" style="cursor:zoom-in;">
+<img alt="Ternura de Girasoles" loading="lazy" src="assets/foto12.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Ternura de Girasoles</h2>
+<p class="product-description">Encantador ramo de girasoles acompañado de un tierno osito de peluche y un globo dorado. Un detalle dulce y memorable para consentir a alguien especial.</p>
+<div class="product-price">$206,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20012%20%E2%80%94%20Hola%2C%20me%20interesa%20Ternura%20de%20Girasoles%20por%20%24206%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto12.webp', 'producto_012')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="013" data-name="Sorpresa Aventurera"><div class="product-code">#013</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto13.webp', 'Sorpresa Aventurera')" style="cursor:zoom-in;">
+<img alt="Sorpresa Aventurera" loading="lazy" src="assets/foto13.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Sorpresa Aventurera</h2>
+<p class="product-description">Original bouquet que combina flores frescas con una divertida sorpresa de coleccionista. Un regalo diferente, ideal para sacar una gran sonrisa.</p>
+<div class="product-price">$112,500</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20013%20%E2%80%94%20Hola%2C%20me%20interesa%20Sorpresa%20Aventurera%20por%20%24112%2C500.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto13.webp', 'producto_013')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="014" data-name="Corazón de Peluche"><div class="product-code">#014</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto14.webp', 'Corazón de Peluche')" style="cursor:zoom-in;">
+<img alt="Corazón de Peluche" loading="lazy" src="assets/foto14.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Corazón de Peluche</h2>
+<p class="product-description">Romántico arreglo en forma de corazón con rosas rojas rodeadas de margaritas y un adorable osito. El detalle perfecto para enamorar.</p>
+<div class="product-price">$175,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20014%20%E2%80%94%20Hola%2C%20me%20interesa%20Coraz%C3%B3n%20de%20Peluche%20por%20%24175%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto14.webp', 'producto_014')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="rosas" data-code="015" data-name="Rosas Encanto Dorado"><div class="product-code">#015</div>
+<div class="category-badge">Rosas</div>
+<div class="product-image" onclick="openLightbox('assets/foto15.webp', 'Rosas Encanto Dorado')" style="cursor:zoom-in;">
+<img alt="Rosas Encanto Dorado" loading="lazy" src="assets/foto15.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Rosas Encanto Dorado</h2>
+<p class="product-description">Elegante ramo de rosas rojas realzado con delicadas mariposas doradas y una fina envoltura. Un clásico atemporal con un toque de distinción.</p>
+<div class="product-price">$150,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20015%20%E2%80%94%20Hola%2C%20me%20interesa%20Rosas%20Encanto%20Dorado%20por%20%24150%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto15.webp', 'producto_015')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="rosas" data-code="016" data-name="Ramo Mariposas Rojas"><div class="product-code">#016</div>
+<div class="category-badge">Rosas</div>
+<div class="product-image" onclick="openLightbox('assets/foto16.webp', 'Ramo Mariposas Rojas')" style="cursor:zoom-in;">
+<img alt="Ramo Mariposas Rojas" loading="lazy" src="assets/foto16.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Ramo Mariposas Rojas</h2>
+<p class="product-description">Bouquet de rosas rojas envuelto en papel kraft y adornado con mariposas doradas. Sencillez y elegancia para expresar un sentimiento sincero.</p>
+<div class="product-price">$87,500</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20016%20%E2%80%94%20Hola%2C%20me%20interesa%20Ramo%20Mariposas%20Rojas%20por%20%2487%2C500.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto16.webp', 'producto_016')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="rosas" data-code="017" data-name="Docena Clásica Roja"><div class="product-code">#017</div>
+<div class="category-badge">Rosas</div>
+<div class="product-image" onclick="openLightbox('assets/foto17.webp', 'Docena Clásica Roja')" style="cursor:zoom-in;">
+<img alt="Docena Clásica Roja" loading="lazy" src="assets/foto17.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Docena Clásica Roja</h2>
+<p class="product-description">Tradicional ramo de una docena de rosas rojas envuelto en papel oscuro con lazo. La forma más pura y elegante de decir 'te amo'.</p>
+<div class="product-price">$75,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20017%20%E2%80%94%20Hola%2C%20me%20interesa%20Docena%20Cl%C3%A1sica%20Roja%20por%20%2475%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto17.webp', 'producto_017')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="rosas" data-code="018" data-name="Jarrón Romance Rosado"><div class="product-code">#018</div>
+<div class="category-badge">Rosas</div>
+<div class="product-image" onclick="openLightbox('assets/foto18.webp', 'Jarrón Romance Rosado')" style="cursor:zoom-in;">
+<img alt="Jarrón Romance Rosado" loading="lazy" src="assets/foto18.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Jarrón Romance Rosado</h2>
+<p class="product-description">Hermoso jarrón de cristal con rosas en tonos rosados y fucsia, listo para lucir. Un arreglo romántico y práctico que dura y embellece cualquier rincón.</p>
+<div class="product-price">$168,750</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20018%20%E2%80%94%20Hola%2C%20me%20interesa%20Jarr%C3%B3n%20Romance%20Rosado%20por%20%24168%2C750.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto18.webp', 'producto_018')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="019" data-name="Cofre Rojo Gourmet"><div class="product-code">#019</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto19.webp', 'Cofre Rojo Gourmet')" style="cursor:zoom-in;">
+<img alt="Cofre Rojo Gourmet" loading="lazy" src="assets/foto19.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Cofre Rojo Gourmet</h2>
+<p class="product-description">Sofisticada caja con rosas rojas, follaje fresco y bombones finos. La unión perfecta entre el romance de las flores y la dulzura del chocolate.</p>
+<div class="product-price">$237,500</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20019%20%E2%80%94%20Hola%2C%20me%20interesa%20Cofre%20Rojo%20Gourmet%20por%20%24237%2C500.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto19.webp', 'producto_019')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="020" data-name="Caja Elegancia Dorada"><div class="product-code">#020</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto20.webp', 'Caja Elegancia Dorada')" style="cursor:zoom-in;">
+<img alt="Caja Elegancia Dorada" loading="lazy" src="assets/foto20.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Caja Elegancia Dorada</h2>
+<p class="product-description">Refinada caja negra con rosas rojas, gypsophila y una selección de chocolates dorados. Un regalo elegante que impresiona a primera vista.</p>
+<div class="product-price">$150,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20020%20%E2%80%94%20Hola%2C%20me%20interesa%20Caja%20Elegancia%20Dorada%20por%20%24150%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto20.webp', 'producto_020')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="021" data-name="Caja Blanca Pasión"><div class="product-code">#021</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto21.webp', 'Caja Blanca Pasión')" style="cursor:zoom-in;">
+<img alt="Caja Blanca Pasión" loading="lazy" src="assets/foto21.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Caja Blanca Pasión</h2>
+<p class="product-description">Elegante caja con abundantes rosas rojas, gypsophila y bombones dorados. Una composición romántica y generosa para ocasiones inolvidables.</p>
+<div class="product-price">$181,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20021%20%E2%80%94%20Hola%2C%20me%20interesa%20Caja%20Blanca%20Pasi%C3%B3n%20por%20%24181%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto21.webp', 'producto_021')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="022" data-name="Gran Cofre del Amor"><div class="product-code">#022</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto22.webp', 'Gran Cofre del Amor')" style="cursor:zoom-in;">
+<img alt="Gran Cofre del Amor" loading="lazy" src="assets/foto22.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Gran Cofre del Amor</h2>
+<p class="product-description">Espectacular caja con rosas rojas, lirios, un tierno peluche y chocolates finos. Un regalo completo y de lujo para consentir sin medida.</p>
+<div class="product-price">$331,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20022%20%E2%80%94%20Hola%2C%20me%20interesa%20Gran%20Cofre%20del%20Amor%20por%20%24331%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto22.webp', 'producto_022')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="023" data-name="Sorpresa Feliz Cumpleaños"><div class="product-code">#023</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto23.webp', 'Sorpresa Feliz Cumpleaños')" style="cursor:zoom-in;">
+<img alt="Sorpresa Feliz Cumpleaños" loading="lazy" src="assets/foto23.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Sorpresa Feliz Cumpleaños</h2>
+<p class="product-description">Festivo arreglo con rosas rojas, un osito de peluche, globo de cumpleaños y chocolates. Todo lo necesario para celebrar a lo grande.</p>
+<div class="product-price">$231,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20023%20%E2%80%94%20Hola%2C%20me%20interesa%20Sorpresa%20Feliz%20Cumplea%C3%B1os%20por%20%24231%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto23.webp', 'producto_023')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="024" data-name="Propuesta Inolvidable"><div class="product-code">#024</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto24.webp', 'Propuesta Inolvidable')" style="cursor:zoom-in;">
+<img alt="Propuesta Inolvidable" loading="lazy" src="assets/foto24.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Propuesta Inolvidable</h2>
+<p class="product-description">Deslumbrante caja con rosas rojas, girasoles y un globo burbuja personalizado. El gesto perfecto para una declaración que nadie olvidará.</p>
+<div class="product-price">$293,750</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20024%20%E2%80%94%20Hola%2C%20me%20interesa%20Propuesta%20Inolvidable%20por%20%24293%2C750.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto24.webp', 'producto_024')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="025" data-name="Girasoles de Aniversario"><div class="product-code">#025</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto25.webp', 'Girasoles de Aniversario')" style="cursor:zoom-in;">
+<img alt="Girasoles de Aniversario" loading="lazy" src="assets/foto25.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Girasoles de Aniversario</h2>
+<p class="product-description">Luminosa caja de girasoles con chocolates finos y un globo dorado conmemorativo. Un detalle alegre y especial para celebrar el amor.</p>
+<div class="product-price">$181,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20025%20%E2%80%94%20Hola%2C%20me%20interesa%20Girasoles%20de%20Aniversario%20por%20%24181%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto25.webp', 'producto_025')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="girasoles" data-code="026" data-name="Girasoles Serenata"><div class="product-code">#026</div>
+<div class="category-badge">Girasoles</div>
+<div class="product-image" onclick="openLightbox('assets/foto26.webp', 'Girasoles Serenata')" style="cursor:zoom-in;">
+<img alt="Girasoles Serenata" loading="lazy" src="assets/foto26.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Girasoles Serenata</h2>
+<p class="product-description">Ramo de girasoles frescos con gypsophila envuelto en tonos suaves y lazo. Alegría y buena energía en una presentación delicada y moderna.</p>
+<div class="product-price">$156,250</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20026%20%E2%80%94%20Hola%2C%20me%20interesa%20Girasoles%20Serenata%20por%20%24156%2C250.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto26.webp', 'producto_026')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="especiales" data-code="027" data-name="Gran Bouquet Preciosa"><div class="product-code">#027</div>
+<div class="category-badge">Especiales</div>
+<div class="product-image" onclick="openLightbox('assets/foto27.webp', 'Gran Bouquet Preciosa')" style="cursor:zoom-in;">
+<img alt="Gran Bouquet Preciosa" loading="lazy" src="assets/foto27.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Gran Bouquet Preciosa</h2>
+<p class="product-description">Imponente bouquet que reúne girasoles, rosas rojas y gypsophila en una envoltura sobria. Una pieza generosa para expresar admiración y cariño.</p>
+<div class="product-price">$200,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20027%20%E2%80%94%20Hola%2C%20me%20interesa%20Gran%20Bouquet%20Preciosa%20por%20%24200%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto27.webp', 'producto_027')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="canastas" data-code="028" data-name="Canasta Bienvenida Bebé"><div class="product-code">#028</div>
+<div class="category-badge badge-canasta">🧺 Canastas</div>
+<div class="product-image" onclick="openLightbox('assets/foto28.webp', 'Canasta Bienvenida Bebé')" style="cursor:zoom-in;">
+<img alt="Canasta Bienvenida Bebé" loading="lazy" src="assets/foto28.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Canasta Bienvenida Bebé</h2>
+<p class="product-description">Tierna canasta con gerberas, rosas y flores en tonos suaves, acompañada de un peluche y un globo de bienvenida. El detalle ideal para celebrar una nueva vida.</p>
+<div class="product-price">$225,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20028%20%E2%80%94%20Hola%2C%20me%20interesa%20Canasta%20Bienvenida%20Beb%C3%A9%20por%20%24225%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto28.webp', 'producto_028')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="gerberas" data-code="029" data-name="Bouquet Fiesta Floral"><div class="product-code">#029</div>
+<div class="category-badge">Gerberas</div>
+<div class="product-image" onclick="openLightbox('assets/foto29.webp', 'Bouquet Fiesta Floral')" style="cursor:zoom-in;">
+<img alt="Bouquet Fiesta Floral" loading="lazy" src="assets/foto29.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Bouquet Fiesta Floral</h2>
+<p class="product-description">Colorido bouquet con girasol, gerberas fucsia, rosas y margaritas envuelto con estilo. Una fiesta de color para alegrar cualquier celebración.</p>
+<div class="product-price">$275,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20029%20%E2%80%94%20Hola%2C%20me%20interesa%20Bouquet%20Fiesta%20Floral%20por%20%24275%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto29.webp', 'producto_029')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="gerberas" data-code="030" data-name="Explosión Multicolor"><div class="product-code">#030</div>
+<div class="category-badge">Gerberas</div>
+<div class="product-image" onclick="openLightbox('assets/foto30.webp', 'Explosión Multicolor')" style="cursor:zoom-in;">
+<img alt="Explosión Multicolor" loading="lazy" src="assets/foto30.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Explosión Multicolor</h2>
+<p class="product-description">Vivaz ramo que combina gerberas, girasol y flores variadas en un derroche de color. Alegría pura para regalar buenos momentos.</p>
+<div class="product-price">$125,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20030%20%E2%80%94%20Hola%2C%20me%20interesa%20Explosi%C3%B3n%20Multicolor%20por%20%24125%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto30.webp', 'producto_030')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+<div class="product-card" data-category="gerberas" data-code="031" data-name="Alegría Primaveral"><div class="product-code">#031</div>
+<div class="category-badge">Gerberas</div>
+<div class="product-image" onclick="openLightbox('assets/foto31.webp', 'Alegría Primaveral')" style="cursor:zoom-in;">
+<img alt="Alegría Primaveral" loading="lazy" src="assets/foto31.webp"/>
+<div class="zoom-hint">🔍 Ver foto</div>
+</div>
+<div class="product-content">
+<h2 class="product-title">Alegría Primaveral</h2>
+<p class="product-description">Fresco bouquet de girasoles, gerberas rosadas y margaritas envuelto en tonos suaves. Una brisa de primavera que transmite ternura y frescura.</p>
+<div class="product-price">$75,000</div>
+<button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=C%C3%B3digo%20031%20%E2%80%94%20Hola%2C%20me%20interesa%20Alegr%C3%ADa%20Primaveral%20por%20%2475%2C000.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F%0A%0AFoto%3A%20https%3A//floristeriacartagena.dondeseria.com/assets/foto31.webp', 'producto_031')">
+                            Pedir Ahora
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-float">
+<a href="#" onclick="return trackWhatsAppLead('https://wa.me/573114701386', 'floating_button_catalogo')">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488"></path>
+</svg>
+</a>
+</div>
+<script>
+        function openLightbox(src, name) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-img').alt = name;
+            document.getElementById('lightbox-caption').textContent = name;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.getElementById('lightbox-img').src = '';
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+<script>
+(function(){
+  function stripAccents(s){return (s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+  function ready(fn){if(document.readyState!=='loading')fn();else document.addEventListener('DOMContentLoaded',fn);}
+  ready(function(){
+    var searchInput = document.getElementById('catalog-search');
+    var filterButtons = document.querySelectorAll('.filter-btn');
+    var productCards  = document.querySelectorAll('.product-card');
+    var activeCategory = 'all';
+    function applyFilters(){
+      var q = stripAccents((searchInput && searchInput.value) || '').trim();
+      productCards.forEach(function(card){
+        var cat   = card.getAttribute('data-category') || '';
+        var code  = (card.getAttribute('data-code') || '').toLowerCase();
+        var name  = stripAccents(card.getAttribute('data-name') || '');
+        var okCat = (activeCategory === 'all') || (cat === activeCategory) || (cat === 'all');
+        var okQry = !q || code.indexOf(q) !== -1 || name.indexOf(q) !== -1;
+        if (okCat && okQry) card.classList.remove('hidden');
+        else card.classList.add('hidden');
+      });
+      document.querySelectorAll('.cat-divider').forEach(function(d){
+        d.style.display = (activeCategory === 'all' && !q) ? '' : 'none';
+      });
+    }
+    filterButtons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        filterButtons.forEach(function(b){b.classList.remove('active');});
+        this.classList.add('active');
+        activeCategory = this.getAttribute('data-category') || 'all';
+        var url = new URL(window.location);
+        if (activeCategory === 'all') url.searchParams.delete('category');
+        else url.searchParams.set('category', activeCategory);
+        window.history.pushState({}, '', url);
+        applyFilters();
+      });
+    });
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    var cat = new URLSearchParams(window.location.search).get('category');
+    if (cat) {
+      var btn = document.querySelector('.filter-btn[data-category="' + cat + '"]');
+      if (btn) btn.click();
+    }
+  });
+})();
+</script>
+</body>
+</html>

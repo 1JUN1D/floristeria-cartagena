@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramos de Girasoles y Tulipanes en Pereira | Envío Hoy</title>
+    <meta name="description" content="Compra ramos de girasoles y tulipanes en Pereira. Arreglos de girasoles, ramos con girasoles y rosas con entrega a domicilio. SanJose Florería Pereira.">
+    <link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+        (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init','1072535878345850');
+        fbq('track','PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1072535878345850&ev=PageView&noscript=1"/></noscript>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HV3B0TES2"></script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js',new Date());
+        gtag('config','G-2HV3B0TES2');
+    </script>
+
+
+
+    <!-- Google Ads Conversion Tracking (ID: AW-17976418670) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17976418670"></script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js',new Date());
+        gtag('config','AW-17976418670');
+    </script>
+
+    <!-- Conversion Linker (se activa en todas las páginas) -->
+    <script>
+        gtag('set','linker',{'accept_incoming':true});
+    </script>
+
+    <!-- FUNCIÓN DE TRACKING WHATSAPP CON CONVERSIÓN GOOGLE ADS -->
+    <script>
+        function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            try {
+                // GA4 Event
+                gtag('event','whatsapp_click',{
+                    'event_category':'engagement',
+                    'event_label':eventLabel,
+                    'page_location':window.location.href
+                });
+                // Google Ads Conversion: Contacto_WhatsApp (Label: KhwvCK_P5P4bEO7C6ftC)
+                gtag('event','conversion',{
+                    'send_to':'AW-17976418670/KhwvCK_P5P4bEO7C6ftC',
+                    'event_callback':function(){
+                        window.open(whatsappUrl,'_blank');
+                    }
+                });
+                // Facebook Pixel
+                if(typeof fbq==='function'){
+                    fbq('track','Contact',{'content_name':eventLabel});
+                }
+                setTimeout(function(){window.open(whatsappUrl,'_blank');},300);
+            } catch(error) {
+                console.error('Error en tracking:',error);
+                window.open(whatsappUrl,'_blank');
+            }
+            return false;
+        }
+    </script>
+
+    <link rel="stylesheet" href="landing-template.css">
+</head>
+<body>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox">
+        <div id="lightbox-overlay" onclick="closeLightbox()"></div>
+        <button id="lightbox-close" onclick="closeLightbox()" title="Cerrar">&#x2715;</button>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="logo">
+                <img src="/assets/logo.webp" alt="SanJose Florería Pereira">
+            </div>
+            <h1>Ramos de Girasoles y Tulipanes</h1>
+            <p class="subtitle">Arreglos de girasoles, bouquets de tulipanes y ramos con girasoles y rosas — entrega a domicilio en Pereira</p>
+            <div class="decorative-line"></div>
+            <button class="cta-hero" onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20vi%20su%20página%20de%20girasoles%20y%20tulipanes%20y%20me%20interesa.%20%C2%BFMe%20pueden%20asesorar%3F','hero_girasoles')">
+                💬 Escríbenos por WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌻</div>
+                    <h3>Girasoles Frescos</h3>
+                    <p>Girasoles premium recién cortados</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Envío Hoy</h3>
+                    <p>Pide ahora y recibe hoy mismo</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌹</div>
+                    <h3>Combinaciones</h3>
+                    <p>Con rosas, claveles y más</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💝</div>
+                    <h3>Para Toda Ocasión</h3>
+                    <p>Cumpleaños, amor, agradecimiento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="catalog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Arreglos de Girasoles</h2>
+                <p>Ramos de girasoles que iluminan cualquier momento — combinados con rosas, claveles y follajes premium</p>
+            </div>
+            <div class="products-grid">
+            <!-- ============================================ -->
+            <!-- 💐 PRODUCTOS DÍA DE LA MADRE - DESTACADOS  -->
+            <!-- ============================================ -->
+            <div class="product-card mothers-day-card" id="dia-de-las-madres">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_30.webp','Eternidad Mariana')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_30.webp" alt="Eternidad Mariana - Día de la Madre" loading="eager">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Eternidad Mariana</h2>
+                    <p class="product-description">Rosa Inmortalizada en intenso fucsia bajo elegante cúpula de cristal acompañada de la imagen de la Virgen María, símbolo perfecto de fe y amor maternal. Una pieza atemporal que conserva su belleza por años para honrar a esa madre que ilumina tu vida.</p>
+                    <div class="product-price">$198,500</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Eternidad%20Mariana%20(con%20la%20Virgen)%20por%20%24198%2C500','eternidad_mariana')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_30_1.png','Rosa Eterna Cúpula')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_30_1.png" alt="Rosa Eterna Cúpula - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Rosa Eterna Cúpula</h2>
+                    <p class="product-description">Rosa Inmortalizada en intenso fucsia bajo sofisticada cúpula de cristal sobre base oscura, una declaración de amor que desafía el tiempo. Detalle exclusivo que conserva la frescura natural de la flor por años para celebrar el amor eterno hacia mamá.</p>
+                    <div class="product-price">$187,500</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Rosa%20Eterna%20Cúpula%20por%20%24187%2C500','rosa_eterna_cupula')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_31.webp','Bouquet Encanto Materno')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_31.webp" alt="Bouquet Encanto Materno - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Bouquet Encanto Materno</h2>
+                    <p class="product-description">Encantador ramo con rosas rojas y delicadas margaritas blancas envuelto en papel artesanal con un romántico moño rojo. Una expresión sencilla y elegante que lleva un mensaje de cariño y frescura directo al corazón de mamá.</p>
+                    <div class="product-price">$90,000</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Bouquet%20Encanto%20Materno%20por%20%2490%2C000','bouquet_encanto_materno')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Edición Limitada</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_32.webp','Tulipán Edición Limitada')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_32.webp" alt="Tulipán Edición Limitada - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Tulipán Edición Limitada</h2>
+                    <p class="product-description">Tulipán de edición limitada cuidadosamente envuelto en papel dorado con tarjeta personalizable y color exclusivo. Un detalle refinado y sofisticado que transmite ternura con un toque de distinción para sorprender a mamá en su día.</p>
+                    <div class="product-price">$43,750</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Tulipán%20Edición%20Limitada%20por%20%2443%2C750','tulipan_edicion_limitada')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_33.webp','Trío Romántico Materno')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_33.webp" alt="Trío Romántico Materno - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Trío Romántico Materno</h2>
+                    <p class="product-description">Compacto bouquet con tres rosas rojas rodeadas de gypsophila y un suave moño rojo, ideal para entregas íntimas y emotivas. Una declaración clásica de amor que conserva la elegancia en cada pétalo y conquista en cualquier ocasión.</p>
+                    <div class="product-price">$56,250</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Trío%20Romántico%20Materno%20por%20%2456%2C250','trio_romantico_materno')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_34.webp','Cofre de Amor Dorado')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_34.webp" alt="Cofre de Amor Dorado - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Cofre de Amor Dorado</h2>
+                    <p class="product-description">Sofisticada caja negra con rosas rojas, gypsophila y un cofre dorado con bombones Ferrero Rocher en la parte superior. La unión perfecta entre el romanticismo de las flores y la dulzura del chocolate para conquistar el corazón de mamá.</p>
+                    <div class="product-price">$143,750</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Cofre%20de%20Amor%20Dorado%20por%20%24143%2C750','cofre_amor_dorado')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_35.webp','Caja Pasión Eterna')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_35.webp" alt="Caja Pasión Eterna - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Caja Pasión Eterna</h2>
+                    <p class="product-description">Caja cuadrada negra con una abundante composición de rosas rojas, gypsophila y eucalipto fresco rematada con un moño rojo en satín. Un arreglo imponente que transforma cualquier espacio en un homenaje lleno de elegancia para mamá.</p>
+                    <div class="product-price">$181,250</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Caja%20Pasión%20Eterna%20por%20%24181%2C250','caja_pasion_eterna')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_36.webp','Sol y Pasión')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_36.webp" alt="Sol y Pasión - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Sol y Pasión</h2>
+                    <p class="product-description">Espectacular caja redonda negra que combina la alegría de los girasoles con el romanticismo de las rosas rojas, finalizada con un gran moño en satín. Un regalo vibrante que celebra la luz y calidez que mamá trae a la vida cada día.</p>
+                    <div class="product-price">$210,000</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Sol%20y%20Pasión%20por%20%24210%2C000','sol_y_pasion')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Premium</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_37.webp','Corazón de Ternura Premium')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_37.webp" alt="Corazón de Ternura Premium - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Corazón de Ternura Premium</h2>
+                    <p class="product-description">Imponente arreglo en forma de corazón con rosas rojas y rosadas, oso de peluche con corazón y bombones Ferrero Rocher distribuidos por toda la pieza. Un detalle inolvidable que reúne ternura, dulzura y romance en un solo regalo memorable.</p>
+                    <div class="product-price">$281,250</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Corazón%20de%20Ternura%20Premium%20por%20%24281%2C250','corazon_ternura_premium')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_38.webp','Corazón Rojo Mamá')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_38.webp" alt="Corazón Rojo Mamá - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Corazón Rojo Mamá</h2>
+                    <p class="product-description">Caja en forma de corazón con rosas rojas perfectamente alineadas y un moño rojo en satín que corona la pieza. La declaración más clásica y romántica para celebrar a la mujer que llena tu corazón con amor incondicional cada día.</p>
+                    <div class="product-price">$156,250</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Corazón%20Rojo%20Mamá%20por%20%24156%2C250','corazon_rojo_mama')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_39.webp','Bouquet Beige Elegancia')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_39.webp" alt="Bouquet Beige Elegancia - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Bouquet Beige Elegancia</h2>
+                    <p class="product-description">Ramo de rosas rojas con gypsophila envuelto en papel beige con moño negro, ideal para una ocasión especial con un toque sobrio y elegante. Un clásico atemporal que conjuga sofisticación y romance para sorprender a mamá con estilo refinado.</p>
+                    <div class="product-price">$125,000</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Bouquet%20Beige%20Elegancia%20por%20%24125%2C000','bouquet_beige_elegancia')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card mothers-day-card">
+                <div class="category-badge mothers-badge">💐 Día de la Madre</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_40.webp','Bouquet Noir Pasión')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_40.webp" alt="Bouquet Noir Pasión - Día de la Madre" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Bouquet Noir Pasión</h2>
+                    <p class="product-description">Ramo de rosas rojas con abundante gypsophila envuelto en papel negro, una combinación moderna y dramática llena de personalidad. Un regalo audaz y refinado para esa madre con estilo único e inolvidable que se merece lo mejor.</p>
+                    <div class="product-price">$137,500</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Bouquet%20Noir%20Pasión%20por%20%24137%2C500','bouquet_noir_pasion')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <!-- ============================================ -->
+            <!-- FIN PRODUCTOS DÍA DE LA MADRE -->
+            <!-- ============================================ -->
+
+            <div class="product-card personalizado-card">
+                <div class="category-badge">✨ Exclusivo</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores.webp','Ramo Personalizado')" style="cursor:zoom-in;">
+                    <img src="/assets/flores.webp" alt="Ramos personalizados Pereira - SanJose Florería" loading="eager">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">🌸 Ramo Personalizado</h2>
+                    <p class="product-description">¿Tienes una idea especial en mente? Diseñamos el arreglo floral perfecto según tus flores favoritas, colores, presupuesto y ocasión. Cada ramo es una creación única hecha con amor solo para ti.</p>
+                    <div class="product-price">¡Cotiza Ahora!</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20quiero%20cotizar%20un%20ramo%20personalizado.%20%C2%BFMe%20pueden%20ayudar%3F','ramo_personalizado')">
+                        💬 Cotizar Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Girasoles</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_2.webp','Sol Imperial')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_2.webp" alt="Sol Imperial - Girasoles y Rosas" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Sol Imperial</h2>
+                    <p class="product-description">Arreglo majestuoso con 4 girasoles, 20 rosas, 5 baritas decorativas, papel coreano y moño satinado. Fusiona luz solar con elegancia romántica en presentación que ilumina corazones eternamente.</p>
+                    <div class="product-price">$253,125</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Sol%20Imperial%20por%20%24168%2C750.%20%C2%BFPodrías%20darme%20más%20información%3F','sol_imperial')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Girasoles</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_3.webp','Constelación Dorada')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_3.webp" alt="Constelación Dorada - Girasoles y Rosas" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Constelación Dorada</h2>
+                    <p class="product-description">Bouquet abundante con 6 girasoles, 38 rosas, dos especies de follajes, papel coreano y moño en cinta satín. Diseño que combina fuerza solar con pasión desbordante siempre.</p>
+                    <div class="product-price">$431,250</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Constelación%20Dorada%20por%20%24287%2C500.%20%C2%BFPodrías%20darme%20más%20información%3F','constelacion_dorada')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Girasoles</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_13.webp','Explosión Solar')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_13.webp" alt="Explosión Solar - Girasoles y Claveles" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Explosión Solar</h2>
+                    <p class="product-description">Arreglo espectacular con 23 girasoles, 20 claveles, follaje y decoración abundante. Diseño que desborda luz, alegría y energía positiva en presentación de máximo impacto visual memorable.</p>
+                    <div class="product-price">$421,875</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Explosión%20Solar%20por%20%24281%2C250.%20%C2%BFPodrías%20darme%20más%20información%3F','explosion_solar')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Girasoles</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_19.webp','Girasoles y Pasión')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_19.webp" alt="Girasoles y Pasión - Girasoles y Rosas Rojas" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Girasoles y Pasión</h2>
+                    <p class="product-description">Bouquet radiante con 3 girasoles, rosas rojas, gypsophila y solidago sobre papel negro elegante. Contraste perfecto entre alegría del sol y pasión del amor en presentación memorable.</p>
+                    <div class="product-price">$131,250</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Girasoles%20y%20Pasión%20por%20%2487%2C500.%20%C2%BFPodrías%20darme%20más%20información%3F','girasoles_y_pasion')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="category-badge">Girasoles</div>
+                <div class="product-image" onclick="openLightbox('/assets/flores_pereira_23.webp','Sol Romántico')" style="cursor:zoom-in;">
+                    <img src="/assets/flores_pereira_23.webp" alt="Sol Romántico - Girasoles y Rosas en Caja" loading="lazy">
+                    <div class="zoom-hint">🔍 Ver foto</div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">Sol Romántico</h2>
+                    <p class="product-description">Bouquet compacto con 2 girasoles, rosas rojas y gypsophila sobre papel negro con base dorada. Presentación elegante y moderna que une luz solar con pasión romántica en perfecta armonía.</p>
+                    <div class="product-price">$138,750</div>
+                    <button class="product-button"
+                        onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20me%20interesa%20Sol%20Romántico%20por%20%2492%2C500.%20%C2%BFPodrías%20darme%20más%20información%3F','sol_romantico')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>¿Quieres un Ramo de Girasoles Único?</h2>
+            <p>Escríbenos por WhatsApp y diseñamos el arreglo de girasoles perfecto para ti</p>
+            <button class="cta-hero" onclick="return trackWhatsAppLead('https://wa.me/573207544126?text=Hola%2C%20quiero%20pedir%20un%20ramo%20de%20girasoles.%20%C2%BFMe%20ayudan%3F','cta_final_girasoles')">
+                💬 Pedir por WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="#" onclick="return trackWhatsAppLead('https://wa.me/573207544126','float_girasoles')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488"/></svg>
+        </a>
+    </div>
+
+    <!-- Lightbox Script -->
+    <script>
+        function openLightbox(src,name){
+            document.getElementById('lightbox-img').src=src;
+            document.getElementById('lightbox-img').alt=name;
+            document.getElementById('lightbox-caption').textContent=name;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow='hidden';
+        }
+        function closeLightbox(){
+            document.getElementById('lightbox').classList.remove('active');
+            document.getElementById('lightbox-img').src='';
+            document.body.style.overflow='';
+        }
+        document.addEventListener('keydown',function(e){
+            if(e.key==='Escape')closeLightbox();
+        });
+    </script>
+
+</body>
+</html>

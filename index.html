@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TR - Florería en Cartagena | Flores Frescas y Secas</title>
+    <meta name="description"
+        content="TR, tu floristería de confianza en Cartagena. Arreglos con flores frescas y secas, regalos y domicilios el mismo día, para clientes al detal y al por mayor.">
+    <link rel="shortcut icon" href="assets/logo.webp" type="image/x-icon">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TR",
+        "image": "assets/logo.webp",
+        "@id": "https://floristeriacartagena.dondeseria.com",
+        "url": "https://floristeriacartagena.dondeseria.com",
+        "telephone": "3114701386",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. San Martín #6-75, Bocagrande",
+            "addressLocality": "Cartagena",
+            "addressRegion": "Bolívar",
+            "addressCountry": "CO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 10.391000,
+            "longitude": -75.479400
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday", 
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "00:00",
+            "closes": "23:30"
+        },
+        "sameAs": [
+            "https://www.instagram.com/florescartagena"
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1072535878345850');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1072535878345850&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HV3B0TES2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2HV3B0TES2');
+    </script>
+    
+    <!-- Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17503274952"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17503274952');
+    </script>
+
+    <!-- FUNCIONES DE TRACKING PARA GOOGLE ANALYTICS -->
+    <script>
+        // Tracking WhatsApp con evento personalizado GA4 + Google Ads
+        function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            try {
+                // Evento personalizado para GA4
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'engagement',
+                    'event_label': eventLabel,
+                    'button_location': eventLabel,
+                    'page_location': window.location.href
+                });
+
+                // Conversión Google Ads
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17503274952/lA9PCODAu4wbEMiPm5pB',
+                    'event_callback': function () {
+                        console.log('Tracking exitoso, abriendo WhatsApp...');
+                        window.open(whatsappUrl, '_blank');
+                    }
+                });
+
+                // Backup: si el callback falla, abre WhatsApp después de 300ms
+                setTimeout(function () {
+                    window.open(whatsappUrl, '_blank');
+                }, 300);
+
+            } catch (error) {
+                console.error('Error en tracking:', error);
+                window.open(whatsappUrl, '_blank');
+            }
+            return false;
+        }
+
+        // Tracking para clicks en navegación
+        function trackNavClick(linkName) {
+            gtag('event', 'nav_click', {
+                'event_category': 'navigation',
+                'event_label': linkName,
+                'link_name': linkName
+            });
+        }
+
+        // Tracking para botones del Hero
+        function trackHeroButton(buttonName) {
+            gtag('event', 'hero_button_click', {
+                'event_category': 'engagement',
+                'event_label': buttonName,
+                'button_name': buttonName
+            });
+        }
+
+        // Tracking para redes sociales
+        function trackSocialClick(platform) {
+            gtag('event', 'social_click', {
+                'event_category': 'social',
+                'event_label': platform,
+                'social_platform': platform
+            });
+        }
+
+        // Tracking para catálogo
+        function trackCatalogClick(source) {
+            gtag('event', 'catalog_view', {
+                'event_category': 'engagement',
+                'event_label': source,
+                'click_source': source
+            });
+        }
+    </script>
+<link href="/dia-del-padre.css" rel="stylesheet"/>
+<script src="/dia-del-padre.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.webp" alt="TR Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" onclick="trackNavClick('inicio')">Inicio</a></li>                <li><a href="catalogo.html" onclick="trackNavClick('san_valentin')">Catalogo</a></li>
+                <li><a href="https://wa.me/573114701386" target="_blank" onclick="trackNavClick('whatsapp_nav'); trackWhatsAppLead('https://wa.me/573114701386', 'navbar_whatsapp')">WhatsApp</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <video class="hero-video" autoplay muted loop>
+            <source src="/assets/wallpaper.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Florería Premium en Cartagena</h1>
+            <p class="hero-subtitle">Convertimos cada celebración en un recuerdo inolvidable con los diseños florales más elegantes de Cartagena</p>
+            <button class="cta-button"
+                onclick="trackHeroButton('hacer_pedido'); return trackWhatsAppLead('https://wa.me/573114701386?text=Hola, quiero hacer un pedido de flores', 'hero_button')">
+                Hacer Pedido
+            </button>
+            <a href="/catalogo.html" class="cta-button catalog-btn" onclick="trackHeroButton('ver_catalogo'); trackCatalogClick('hero_section')">
+                <span class="heart-emoji">💖</span>
+                Ver Catálogo
+                <span class="heart-emoji">💖</span>
+            </a>
+        </div>
+    </section>
+
+<!-- Products Cards -->
+<section class="products">
+    <div class="container">
+        <p class="section-title">Nuestros Productos Destacados</p>
+        <div class="cards-grid">
+            
+            <!-- Product 1 - Trío de Girasoles -->
+            <div class="product-card">
+                <div class="product-badge">Más Vendido</div>
+                <div class="product-image">
+                    <img src="assets/foto9.webp" alt="Trío de Girasoles - Ramo de tres girasoles con gypsophila">
+                </div>
+                <div class="card-content">
+                    <p class="product-name">Trío de Girasoles</p>
+                    <p class="product-description">Luminoso ramo de tres girasoles con gypsophila y follaje fresco. Un detalle sencillo y alegre, ideal para arrancar sonrisas y transmitir buena energía.</p>
+                    <p class="product-price">$75,000</p>
+                    <button class="order-btn"
+                        onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=Hola, me interesa Trío de Girasoles por $75,000. ¿Podrías darme más información?', 'trio_girasoles')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 - Bouquet Jardín Vibrante -->
+            <div class="product-card">
+                <div class="product-badge">Más Vendido</div>
+                <div class="product-image">
+                    <img src="assets/foto3.webp" alt="Bouquet Jardín Vibrante - Girasoles y rosas de colores">
+                </div>
+                <div class="card-content">
+                    <p class="product-name">Bouquet Jardín Vibrante</p>
+                    <p class="product-description">Ramo lleno de color con girasoles y rosas en tonos fucsia y rosado, realzado con toques de gypsophila. Una explosión de vida y frescura envuelta con elegancia.</p>
+                    <p class="product-price">$181,250</p>
+                    <button class="order-btn"
+                        onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=Hola, me interesa Bouquet Jardín Vibrante por $181,250. ¿Podrías darme más información?', 'bouquet_jardin_vibrante')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 - Gran Cofre del Amor -->
+            <div class="product-card">
+                <div class="product-badge">Premium</div>
+                <div class="product-image">
+                    <img src="assets/foto22.webp" alt="Gran Cofre del Amor - Caja con rosas, lirios, peluche y chocolates">
+                </div>
+                <div class="card-content">
+                    <p class="product-name">Gran Cofre del Amor</p>
+                    <p class="product-description">Espectacular caja con rosas rojas, lirios, un tierno peluche y chocolates finos. Un regalo completo y de lujo para consentir a esa persona especial sin medida.</p>
+                    <p class="product-price">$331,250</p>
+                    <button class="order-btn"
+                        onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=Hola, me interesa Gran Cofre del Amor por $331,250. ¿Podrías darme más información?', 'gran_cofre_amor')">
+                        Pedir Ahora
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- Photo Collage -->
+    <section class="gallery">
+        <div class="container">
+            <p class="section-title">Galería de Nuestros Trabajos</p>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="assets/foto5.webp" alt="Arreglo floral 1">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto6.webp" alt="Arreglo floral 2">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto7.webp" alt="Arreglo floral 3">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto8.webp" alt="Arreglo floral 4">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto9.webp" alt="Arreglo floral 5">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto10.webp" alt="Arreglo floral 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-item">
+                    <h2>Tienda de Flores Secas</h2>
+                    <p>Explora nuestra selección de flores secas, ideales para dar calidez y un toque duradero a cualquier ambiente. Son piezas que mantienen su belleza natural durante mucho tiempo, perfectas para embellecer casas, oficinas y celebraciones. Las elaboramos a mano con técnicas que conservan sus colores y texturas, logrando diseños originales que decoran sin necesidad de cuidados.</p>
+                    <button class="service-btn" onclick="window.open('tienda-flores-secas-pereira.html', '_self')">Ver Más</button>
+                </div>
+                <div class="service-image">
+                    <img src="assets/foto16.webp" alt="Flores Secas">
+                </div>
+            </div>
+
+            <div class="services-grid reverse">
+                <div class="service-image">
+                    <img src="assets/foto13.webp" alt="Mayorista">
+                </div>
+                <div class="service-item">
+                    <h2>Florería Mayorista</h2>
+                    <p>Somos especialistas en abastecer eventos de gran formato, bodas, celebraciones corporativas y a profesionales del mundo floral. Manejamos precios especiales para compras al por mayor y un extenso surtido de flores frescas, tanto importadas como nacionales. Nuestro servicio incluye asesoría a la medida, entregas programadas y plena flexibilidad para pedidos de gran volumen, trabajando de la mano con los mejores cultivadores para asegurar frescura en cada despacho.</p>
+                    <button class="service-btn" onclick="window.open('floreria-mayorista-pereira.html', '_self')">Ver Más</button>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <h2>Tienda de Regalos</h2>
+                    <p>Dale un plus a tus flores con nuestra variedad de detalles: chocolates artesanales, velas aromáticas, peluches, globos y accesorios exclusivos. Escogemos cada producto con dedicación para regalar momentos cargados de emoción. Contamos con alternativas para cada celebración —cumpleaños, aniversarios, San Valentín, Día de la Madre y otras fechas importantes— y te acompañamos para armar el obsequio ideal que diga justo lo que quieres transmitir.</p>
+                    <button class="service-btn" onclick="window.open('tienda-regalos-pereira.html', '_self')">Ver Más</button>
+                </div>
+                <div class="service-image">
+                    <img src="assets/foto14.webp" alt="Regalos">
+                </div>
+            </div>
+
+            <div class="services-grid reverse">
+                <div class="service-image">
+                    <img src="assets/foto15.webp" alt="Entrega">
+                </div>
+                <div class="service-item">
+                    <h2>Entrega de Flores</h2>
+                    <p>Llevamos tus flores de forma rápida y segura por toda Cartagena y los municipios cercanos, cuidando que lleguen frescas y a tiempo. Realizamos entregas el mismo día en pedidos hechos antes de las 2:00 PM, envíos programados para fechas especiales y un servicio urgente para imprevistos. Cada despacho cuenta con seguimiento en vivo y confirmación con foto al entregar, para que quedes totalmente tranquilo.</p>
+                    <button class="service-btn" onclick="window.open('entrega-flores-pereira.html', '_self')">Ver Más</button>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <h2>Tienda de Canastas de Regalos</h2>
+                    <p>Diseñamos canastas a la medida, pensadas para dejar una huella imborrable en toda ocasión. Unimos flores frescas o secas con productos gourmet, vinos selectos, chocolates artesanales, frutas y accesorios únicos. Cada propuesta se adapta a la celebración y al presupuesto, desde elegantes detalles corporativos hasta románticas sorpresas íntimas, con composiciones que enamoran a primera vista, perfectas para empresas, la familia o el amor de tu vida.</p>
+                    <button class="service-btn" onclick="window.open('tienda-canasta-regalos-pereira.html', '_self')">Ver Más</button>
+                </div>
+                <div class="service-image">
+                    <img src="assets/foto12.webp" alt="Canastas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="service-areas">
+        <div class="container">
+            <p class="section-title">Áreas de Cobertura</p>
+            <p class="areas-intro">Llevamos la belleza de nuestras flores a todos los rincones de Cartagena y sus alrededores. Nuestro servicio a domicilio cubre las siguientes zonas:</p>
+            
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Cartagena Centro</h3>
+                    <p>Cubrimos el centro histórico, Pie de la Popa, El Cabrero, Blas de Lezo y todo el corazón comercial de la ciudad.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Bocagrande y Castillogrande</h3>
+                    <p>Amplia cobertura en la zona residencial exclusiva, con sus centros comerciales, restaurantes y la animada zona rosa de Cartagena.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Turbaco</h3>
+                    <p>Llegamos a Getsemaní, Manga, Zaragocilla, el Centro y todas las urbanizaciones de este municipio vecino.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Turbaná</h3>
+                    <p>Atendemos el centro, sus principales urbanizaciones y los sectores en crecimiento de este tradicional municipio.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Arjona</h3>
+                    <p>Cubrimos el centro de Arjona, sus barrios residenciales y las zonas de expansión cercanas a Cartagena.</p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Más Zonas</h3>
+                    <p>También Crespo, Ternera, Castillogrande, Marbella, La Castellana y muchos otros barrios de toda la ciudad y sus alrededores.</p>
+                </div>
+            </div>
+
+            <div class="areas-cta">
+                <p>¿No ves tu zona en la lista? Escríbenos y confirmamos si llegamos hasta tu dirección.</p>
+                <button class="area-btn" onclick="return trackWhatsAppLead('https://wa.me/573114701386?text=Hola, quiero verificar si hacen entregas en mi zona de Cartagena', 'area_coverage_btn')">
+                    Consultar Cobertura
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="location">
+        <div class="container">
+            <p class="section-title">Ubicación</p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps?q=Cartagena+de+Indias,+Bol%C3%ADvar,+Colombia&output=embed"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-brand">TR</p>
+                <a href="https://www.instagram.com/florescartagena" target="_blank" class="instagram-icon" onclick="trackSocialClick('instagram')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <p class="footer-year">2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="#" onclick="return trackWhatsAppLead('https://wa.me/573114701386', 'floating_button')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Valentine's Modal Auto-close
+        window.addEventListener('load', function() {
+            const modal = document.getElementById('valentineModal');
+            
+            // Cerrar automáticamente después de 5 segundos
+            setTimeout(function() {
+                modal.style.display = 'none';
+            }, 5000);
+            
+            // Cerrar al hacer click en el overlay
+            const overlay = document.querySelector('.valentine-overlay');
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
