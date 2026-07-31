@@ -1,0 +1,504 @@
+/* =====================================================================
+   TR Florería Cartagena — ESPECIAL DÍA DE LA NOVIA (1 de agosto)
+   Flyer flotante + carrusel + resalte de los 3 arreglos en promoción.
+
+   · Todo el resalte vive bajo  html.dn-activo  → cuando la promo termina
+     las tarjetas vuelven solas a su diseño normal, sin tocar nada.
+   · Sin librerías, sin webfonts extra, sin imágenes nuevas.
+   · Animaciones sólo sobre transform/opacity (compuestas por la GPU).
+   ===================================================================== */
+
+:root {
+    --dn-rose: #D94A7A;
+    --dn-rose-deep: #A62B57;
+    --dn-gold: #C9A86A;
+    --dn-ink: #1A1220;
+    --dn-cream: #FFF6F9;
+}
+
+/* Todo lo marcado .dn-only sólo existe mientras la promo está vigente.
+   Añade además .dn-only-flex cuando el elemento deba ser flex. */
+.dn-only { display: none !important; }
+html.dn-activo .dn-only { display: block !important; }
+html.dn-activo .dn-only-flex { display: flex !important; }
+
+/* =====================================================================
+   1. RESALTE DE LAS TARJETAS EN PROMOCIÓN
+   ===================================================================== */
+html.dn-activo .dn-card {
+    position: relative;
+    border-color: transparent !important;
+    box-shadow:
+        0 0 0 2px var(--dn-rose),
+        0 0 0 6px rgba(217, 74, 122, 0.14),
+        0 26px 60px rgba(217, 74, 122, 0.22) !important;
+    background: linear-gradient(180deg, var(--dn-cream) 0%, #FFFFFF 55%) !important;
+    z-index: 1;
+}
+
+html.dn-activo .dn-card::after {
+    /* Aro interior que late — la tarjeta tiene overflow:hidden, por eso va
+       con sombra "inset"; sólo se anima opacity → lo compone la GPU. */
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow:
+        inset 0 0 0 2px rgba(217, 74, 122, 0.9),
+        inset 0 0 30px rgba(217, 74, 122, 0.3);
+    opacity: 0.3;
+    animation: dn-halo 2.8s ease-in-out infinite;
+}
+
+@keyframes dn-halo {
+    0%, 100% { opacity: 0.25; }
+    50%      { opacity: 1; }
+}
+
+html.dn-activo .dn-card:hover {
+    transform: translateY(-12px);
+}
+
+/* Banderín al pie de la foto — no tapa el mensaje escrito a mano */
+.dn-flag {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 10px;
+    background: linear-gradient(135deg, var(--dn-rose) 0%, var(--dn-rose-deep) 100%);
+    color: #fff;
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 -8px 20px rgba(166, 43, 87, 0.25);
+}
+
+/* El chip "AMPLIAR" del catálogo sube para no chocar con el banderín */
+html.dn-activo .dn-card .product-image::after { bottom: 50px; }
+
+/* Sello de descuento — esquina inferior izquierda de la foto
+   (la derecha la usa el indicador "AMPLIAR" del catálogo) */
+.dn-off {
+    position: absolute;
+    bottom: 50px;
+    left: 12px;
+    z-index: 3;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--dn-ink);
+    color: #FFD9E5;
+    border: 1px solid var(--dn-gold);
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 8px 20px rgba(26, 18, 32, 0.35);
+    transform: rotate(-8deg);
+}
+
+.dn-off small {
+    font-size: 0.45rem;
+    letter-spacing: 0.16em;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-top: 3px;
+}
+
+/* Precio: antes / ahora */
+html.dn-activo .dn-card .product-price::before {
+    content: 'Precio Día de la Novia' !important;
+    color: var(--dn-rose) !important;
+}
+
+html.dn-activo .dn-card .product-price {
+    color: var(--dn-rose-deep) !important;
+    margin-bottom: 0.6rem;
+}
+
+.dn-old {
+    display: block;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #8B8391;
+    text-decoration: line-through;
+    text-decoration-color: rgba(217, 74, 122, 0.8);
+    margin-bottom: 2px;
+}
+
+/* Contador dentro de la tarjeta */
+.dn-cd {
+    order: 3;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 1rem;
+    padding: 9px 12px;
+    border-radius: 999px;
+    background: rgba(217, 74, 122, 0.08);
+    border: 1px dashed rgba(217, 74, 122, 0.55);
+    color: var(--dn-rose-deep);
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.dn-cd b {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+}
+
+/* Botón de filtro del catálogo */
+html.dn-activo .filter-btn.dn-filter {
+    background: linear-gradient(135deg, var(--dn-rose) 0%, var(--dn-rose-deep) 100%) !important;
+    color: #fff !important;
+    border-color: var(--dn-rose-deep) !important;
+}
+
+/* =====================================================================
+   2. FLYER FLOTANTE CON CARRUSEL
+   ===================================================================== */
+.dn-flyer {
+    position: fixed;
+    left: 22px;
+    bottom: 22px;
+    z-index: 1200;
+    width: 288px;
+    max-width: calc(100vw - 32px);
+    box-sizing: border-box;
+    padding: 12px 12px 14px;
+    border-radius: 22px;
+    background: linear-gradient(170deg, #FFFFFF 0%, var(--dn-cream) 100%);
+    border: 1px solid rgba(217, 74, 122, 0.35);
+    box-shadow: 0 26px 70px rgba(26, 18, 32, 0.28);
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--dn-ink);
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+    transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+    will-change: transform, opacity;
+}
+
+.dn-flyer.dn-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.dn-flyer__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 5;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(26, 18, 32, 0.72);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dn-flyer__close:hover { background: var(--dn-rose-deep); }
+
+.dn-flyer__kicker {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--dn-rose) 0%, var(--dn-rose-deep) 100%);
+    color: #fff;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.dn-flyer__title {
+    display: block;
+    margin: 7px 0 2px;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.dn-flyer__sub {
+    display: block;
+    font-size: 0.68rem;
+    line-height: 1.35;
+    color: #6B6375;
+    margin-bottom: 9px;
+}
+
+/* --- Carrusel --- */
+.dn-car {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #F1E9EE;
+}
+
+.dn-track {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 0.84;
+}
+
+.dn-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.03);
+    transition: opacity 0.55s ease, transform 0.7s ease, visibility 0.55s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.dn-slide.is-on {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.dn-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 26%;
+    display: block;
+}
+
+.dn-slide__info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 26px 12px 10px;
+    background: linear-gradient(to top, rgba(20, 14, 24, 0.92) 25%, rgba(20, 14, 24, 0) 100%);
+    color: #fff;
+}
+
+.dn-slide__name {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.98rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.dn-slide__price {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    margin-top: 3px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #FFC2D6;
+}
+
+.dn-slide__price s {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--dn-ink);
+    font-size: 17px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.dn-nav:hover { background: #fff; }
+.dn-prev { left: 8px; }
+.dn-next { right: 8px; }
+
+.dn-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 7px 0 7px;
+}
+
+.dn-dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(217, 74, 122, 0.28);
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.dn-dot.is-on {
+    background: var(--dn-rose);
+    transform: scale(1.35);
+}
+
+/* --- Contador del flyer --- */
+.dn-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 9px;
+    font-size: 0.66rem;
+    font-weight: 600;
+    color: var(--dn-rose-deep);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.dn-timer b {
+    background: rgba(217, 74, 122, 0.1);
+    border: 1px solid rgba(217, 74, 122, 0.35);
+    border-radius: 7px;
+    padding: 3px 5px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* --- CTAs --- */
+.dn-cta {
+    display: block;
+    text-align: center;
+    padding: 11px 10px;
+    border-radius: 999px;
+    background: #1EBE5D;
+    color: #fff;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.dn-cta:hover {
+    background: #169549;
+    transform: translateY(-2px);
+}
+
+.dn-link {
+    display: block;
+    text-align: center;
+    margin-top: 7px;
+    font-size: 0.69rem;
+    font-weight: 500;
+    color: var(--dn-rose-deep);
+    text-decoration: none;
+}
+
+.dn-link:hover { text-decoration: underline; }
+
+/* Pestaña para volver a abrir el flyer tras cerrarlo */
+.dn-reopen {
+    position: fixed;
+    left: 0;
+    bottom: 92px;
+    z-index: 1150;
+    border: none;
+    border-radius: 0 12px 12px 0;
+    padding: 10px 12px;
+    background: linear-gradient(135deg, var(--dn-rose) 0%, var(--dn-rose-deep) 100%);
+    color: #fff;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(166, 43, 87, 0.4);
+}
+
+/* =====================================================================
+   3. MÓVIL — flyer compacto horizontal, no tapa el botón de WhatsApp
+   ===================================================================== */
+@media (max-width: 640px) {
+    .dn-flyer {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        max-width: none;
+        padding: 10px;
+        border-radius: 18px;
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        column-gap: 10px;
+        row-gap: 0;
+        align-items: center;
+    }
+
+    .dn-flyer__head { grid-column: 2; }
+    .dn-flyer__kicker { font-size: 0.53rem; padding: 3px 9px; }
+    .dn-flyer__title { font-size: 0.92rem; margin: 5px 0 0; }
+    .dn-flyer__sub { display: none; }
+    .dn-car { grid-column: 1; grid-row: 1 / span 3; border-radius: 14px; }
+    .dn-slide__info { display: none; }
+    .dn-nav, .dn-dots { display: none; }
+
+    .dn-timer {
+        grid-column: 2;
+        justify-content: flex-start;
+        margin: 5px 0 0;
+        font-size: 0.63rem;
+        white-space: nowrap;
+        gap: 3px;
+    }
+    .dn-timer b { background: none; border: none; padding: 0 1px; }
+
+    .dn-cta { grid-column: 2; margin-top: 7px; padding: 9px; font-size: 0.66rem; letter-spacing: 0.08em; }
+    .dn-link { display: none; }
+    .dn-flyer__close { top: 4px; right: 4px; width: 24px; height: 24px; font-size: 12px; }
+
+    html.dn-flyer-open .whatsapp-float { bottom: 168px; }
+    .dn-reopen { bottom: 100px; }
+
+    .dn-flag { font-size: 0.55rem; padding: 8px; letter-spacing: 0.12em; }
+    .dn-off { width: 50px; height: 50px; font-size: 0.85rem; bottom: 46px; }
+}
+
+/* =====================================================================
+   4. ACCESIBILIDAD — respeta "reducir movimiento"
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    .dn-flyer, .dn-slide, html.dn-activo .dn-card::after {
+        transition-duration: 0.01ms !important;
+        animation: none !important;
+    }
+    html.dn-activo .dn-card::after { opacity: 0.4; }
+}
