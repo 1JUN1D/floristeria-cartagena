@@ -1,0 +1,115 @@
+/* =====================================================================
+   FLORISTERÍA LIRIOS — Identidad de marca (se carga en todas las páginas)
+   Paleta:  Rosado #EE82A5  ·  Verde #3E584A
+   Tipografía principal: Walkingrush · Secundaria: BasicCommercial LT Light
+
+   Las dos fuentes de marca son de licencia y todavía no están en el
+   servidor, así que los visitantes ven sus equivalentes de Google Fonts
+   (Allura para Walkingrush y Work Sans para BasicCommercial). Cuando se
+   tengan los archivos, se suben a /assets/fonts/ y se agrega su url()
+   en los @font-face de abajo.
+   ===================================================================== */
+@font-face {
+    font-family: 'Walkingrush';
+    src: local('Walkingrush'), local('Walkingrush Regular');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'BasicCommercial LT Light';
+    src: local('BasicCommercial LT Light'), local('BasicCommercialLT-Light');
+    font-weight: 300 400;
+    font-display: swap;
+}
+
+:root {
+    --lirios-rosa: #EE82A5;
+    --lirios-rosa-oscuro: #D9668D;
+    --lirios-rosa-suave: #FBE7EE;
+    --lirios-verde: #3E584A;
+    --lirios-verde-oscuro: #263A30;
+    --lirios-script: 'Walkingrush', 'Allura', 'Great Vibes', cursive;
+    --lirios-sans: 'BasicCommercial LT Light', 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    --font-title: var(--lirios-script);
+    --font-body: var(--lirios-sans);
+}
+
+body { font-family: var(--lirios-sans); }
+
+/* ── Títulos en la tipografía principal (script) ─────────────── */
+.hero-content h1,
+.hero h1,
+.header h1,
+.category-hero h1,
+.category-hero-content h1,
+.service-hero-content h1,
+.section-title,
+.section-title h2,
+.service-item h2,
+.content-section h2,
+.cta-section h2,
+.cta-final h2,
+.final-cta h2,
+.content-block h2,
+.footer-brand {
+    font-family: var(--lirios-script) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    letter-spacing: 0 !important;
+    line-height: 1.15;
+}
+/* El script se ve más pequeño a igual tamaño: se compensa */
+.hero-content h1 { font-size: clamp(3.4rem, 7.5vw, 6.4rem) !important; }
+.header h1 { font-size: clamp(3rem, 7vw, 5rem) !important; }
+.section-title { font-size: clamp(2.6rem, 4.8vw, 3.6rem); }
+.section-title h2 { font-size: clamp(2.6rem, 4.8vw, 3.6rem) !important; }
+.service-item h2 { font-size: clamp(2.3rem, 3.6vw, 3rem) !important; }
+.footer-brand { font-size: 2.2rem !important; }
+
+/* ── Nombres, precios y textos pequeños en la secundaria (sans) ─ */
+.product-name,
+.product-title,
+.product-price,
+.price,
+.price-item h4,
+.area-card h3,
+.area-name,
+.benefit-item h3,
+.feature-card h3,
+.content-block h3,
+.faq-question,
+.special-title,
+.promo-flyer-content h2,
+.promo-new-price,
+.service-item h2::before,
+.hero .subtitle {
+    font-family: var(--lirios-sans) !important;
+    font-style: normal !important;
+}
+.product-name, .product-title { font-weight: 500 !important; letter-spacing: 0.01em; }
+.product-price, .price, .promo-new-price { font-weight: 600 !important; letter-spacing: 0.01em; }
+
+/* ── Logo: cuadro rosado con el lirio en blanco ─────────────── */
+.nav-logo img {
+    height: 56px !important;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 14px rgba(38, 58, 48, 0.15) !important;
+}
+.logo img,
+.hero .logo img {
+    height: 112px !important;
+    padding: 0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35), 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ── Dirección bajo el mapa ─────────────────────────────────── */
+.map-address {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 0.98rem;
+    color: var(--lirios-verde);
+    font-family: var(--lirios-sans);
+}
+.map-address strong { font-weight: 600; }

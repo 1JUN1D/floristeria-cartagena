@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════
-   LANDING TEMPLATE CSS — SanJose Florería Pereira
+   LANDING TEMPLATE CSS — Floristería Lirios Cartagena
    REDISEÑO "LUXURY FLORAL" · solo estilo (estructura intacta)
    Un solo archivo para todas las landing pages de Google Ads
-   Color de marca conservado: #BF9460 · variante profunda #8F6F48
+   Color de marca conservado: #EE82A5 · variante profunda #3E584A
    ═══════════════════════════════════════════════════════════════ */
 
 * {
@@ -12,26 +12,26 @@
 }
 
 :root {
-    --primary: #BF9460;
-    --secondary: #F2CEA2;
-    --accent: #8C5F37;
-    --primary-deep: #8F6F48;
+    --primary: #EE82A5;
+    --secondary: #F7C3D4;
+    --accent: #3E584A;
+    --primary-deep: #3E584A;
 
-    --ink: #14101B;
-    --ink-2: #221B2E;
-    --warm-white: #FDFCFB;
-    --cream: #F8F5F0;
-    --brand-tint: #F6EFE2;
-    --gold: #C9A86A;
-    --gold-dark: #A8853F;
-    --text: #2B2433;
-    --text-soft: #6B6375;
-    --hairline: rgba(22, 18, 28, 0.09);
+    --ink: #263A30;
+    --ink-2: #3E584A;
+    --warm-white: #FFFDFD;
+    --cream: #FDF4F7;
+    --brand-tint: #FBE7EE;
+    --gold: #EE82A5;
+    --gold-dark: #D9668D;
+    --text: #2E3B34;
+    --text-soft: #5F6B65;
+    --hairline: rgba(38, 58, 48, 0.09);
     --wa: #1EBE5D;
     --wa-dark: #169549;
 
-    --font-title: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
-    --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-title: 'Walkingrush', 'Allura', 'Great Vibes', cursive;
+    --font-body: 'BasicCommercial LT Light', 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -64,9 +64,9 @@ body {
     content: '';
     position: absolute;
     inset: 18px;
-    border: 1px solid rgba(201, 168, 106, 0.22);
+    border: 1px solid rgba(238, 130, 165, 0.22);
     pointer-events: none;
-    background: radial-gradient(ellipse at 30% 40%, rgba(201, 168, 106, 0.12) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 30% 40%, rgba(238, 130, 165, 0.12) 0%, transparent 70%);
 }
 
 .hero .logo img {
@@ -102,13 +102,13 @@ body {
     width: 64px;
     height: 1px;
     background: var(--gold);
-    box-shadow: 0 0 14px rgba(201, 168, 106, 0.7);
+    box-shadow: 0 0 14px rgba(238, 130, 165, 0.7);
 }
 
 .hero .subtitle {
     font-family: var(--font-body);
     font-weight: 300;
-    color: rgba(253, 252, 251, 0.8);
+    color: rgba(255, 253, 253, 0.8);
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     max-width: 700px;
     margin: 0 auto;
@@ -147,7 +147,7 @@ body {
     width: 120px;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    box-shadow: 0 0 14px rgba(201, 168, 106, 0.6);
+    box-shadow: 0 0 14px rgba(238, 130, 165, 0.6);
     margin: 1.4rem auto;
     border-radius: 2px;
     position: relative;
@@ -256,7 +256,7 @@ body {
     border-radius: 220px 220px 18px 18px;
     overflow: hidden;
     padding: 12px 12px 16px;
-    box-shadow: 0 20px 50px rgba(20, 16, 27, 0.07);
+    box-shadow: 0 20px 50px rgba(38, 58, 48, 0.07);
     transition: transform 0.45s ease, box-shadow 0.45s ease;
     animation: fadeInUp 0.6s ease-out both;
     position: relative;
@@ -269,7 +269,7 @@ body {
 
 .product-card:hover {
     transform: translateY(-9px);
-    box-shadow: 0 30px 62px rgba(20, 16, 27, 0.13);
+    box-shadow: 0 30px 62px rgba(38, 58, 48, 0.13);
 }
 
 .product-image {
@@ -281,7 +281,7 @@ body {
     position: relative;
     cursor: zoom-in;
     border-radius: 210px 210px 14px 14px;
-    box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.55);
+    box-shadow: 0 0 0 1px rgba(238, 130, 165, 0.55);
 }
 
 .product-image img {
@@ -299,14 +299,14 @@ body {
     position: absolute;
     bottom: 12px;
     right: 12px;
-    background: rgba(20, 16, 27, 0.7);
+    background: rgba(38, 58, 48, 0.7);
     color: var(--gold);
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     padding: 4px 11px;
     border-radius: 999px;
-    border: 1px solid rgba(201, 168, 106, 0.5);
+    border: 1px solid rgba(238, 130, 165, 0.5);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s;
@@ -320,7 +320,7 @@ body {
 .category-badge {
     order: 4;
     align-self: center;
-    background: rgba(20, 16, 27, 0.9);
+    background: rgba(38, 58, 48, 0.9);
     color: var(--gold);
     padding: 5px 14px;
     border-radius: 999px;
@@ -328,7 +328,7 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    border: 1px solid rgba(201, 168, 106, 0.5);
+    border: 1px solid rgba(238, 130, 165, 0.5);
 }
 
 .product-code {
@@ -350,13 +350,13 @@ body {
 .mothers-day-card {
     border: 1px solid var(--gold) !important;
     background: var(--brand-tint) !important;
-    box-shadow: 0 20px 50px rgba(20, 16, 27, 0.08) !important;
+    box-shadow: 0 20px 50px rgba(38, 58, 48, 0.08) !important;
     position: relative;
     overflow: hidden;
 }
 
 .mothers-day-card:hover {
-    box-shadow: 0 30px 62px rgba(20, 16, 27, 0.14) !important;
+    box-shadow: 0 30px 62px rgba(38, 58, 48, 0.14) !important;
     transform: translateY(-11px) !important;
 }
 
@@ -374,7 +374,7 @@ body {
     letter-spacing: 0.16em;
     transform: rotate(-45deg);
     z-index: 5;
-    box-shadow: 0 3px 10px rgba(20, 16, 27, 0.3);
+    box-shadow: 0 3px 10px rgba(38, 58, 48, 0.3);
     pointer-events: none;
 }
 
@@ -400,7 +400,7 @@ body {
     background: var(--ink) !important;
     color: var(--gold) !important;
     font-weight: 500;
-    border: 1px solid rgba(201, 168, 106, 0.5) !important;
+    border: 1px solid rgba(238, 130, 165, 0.5) !important;
 }
 
 .product-content {
@@ -521,7 +521,7 @@ body {
     content: '';
     position: absolute;
     inset: 20px;
-    border: 1px solid rgba(201, 168, 106, 0.22);
+    border: 1px solid rgba(238, 130, 165, 0.22);
     pointer-events: none;
 }
 
@@ -536,7 +536,7 @@ body {
 }
 
 .cta-final p {
-    color: rgba(253, 252, 251, 0.8);
+    color: rgba(255, 253, 253, 0.8);
     font-size: 1.05rem;
     font-weight: 300;
     margin-bottom: 1.6rem;
@@ -580,7 +580,7 @@ body {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(20, 16, 27, 0.92);
+    background: rgba(38, 58, 48, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: 9999;
@@ -622,8 +622,8 @@ body {
     position: absolute;
     top: 18px;
     right: 22px;
-    background: rgba(201, 168, 106, 0.16);
-    border: 1px solid rgba(201, 168, 106, 0.4);
+    background: rgba(238, 130, 165, 0.16);
+    border: 1px solid rgba(238, 130, 165, 0.4);
     color: var(--warm-white);
     font-size: 24px;
     cursor: pointer;
@@ -637,7 +637,7 @@ body {
 }
 
 #lightbox-close:hover {
-    background: rgba(201, 168, 106, 0.32);
+    background: rgba(238, 130, 165, 0.32);
 }
 
 #lightbox-overlay {

@@ -1,35 +1,35 @@
 /*
- * SanJose Florería — Pereira · PÁGINAS DE CATEGORÍA / SERVICIO
+ * Floristería Lirios — Cartagena · PÁGINAS DE CATEGORÍA / SERVICIO
  * REDISEÑO "LUXURY FLORAL" · solo estilo (estructura intacta)
- * Cargan junto con styles.css (navbar/footer). Color de marca: #BF9460
+ * Cargan junto con styles.css (navbar/footer). Color de marca: #EE82A5
  */
 
 :root {
-    --primary: #BF9460;
-    --secondary: #F2CEA2;
-    --accent: #8C5F37;
-    --highlight: #F2C9C9;
-    --background: #F2F2F2;
+    --primary: #EE82A5;
+    --secondary: #F7C3D4;
+    --accent: #3E584A;
+    --highlight: #FBE3EB;
+    --background: #F7F4F3;
     --text-dark: #333;
     --text-light: #555;
     --white: #fff;
-    --primary-deep: #8F6F48;
+    --primary-deep: #3E584A;
 
-    --ink: #14101B;
-    --ink-2: #221B2E;
-    --warm-white: #FDFCFB;
-    --cream: #F8F5F0;
-    --brand-tint: #F6EFE2;
-    --gold: #C9A86A;
-    --gold-dark: #A8853F;
-    --text: #2B2433;
-    --text-soft: #6B6375;
-    --hairline: rgba(22, 18, 28, 0.09);
+    --ink: #263A30;
+    --ink-2: #3E584A;
+    --warm-white: #FFFDFD;
+    --cream: #FDF4F7;
+    --brand-tint: #FBE7EE;
+    --gold: #EE82A5;
+    --gold-dark: #D9668D;
+    --text: #2E3B34;
+    --text-soft: #5F6B65;
+    --hairline: rgba(38, 58, 48, 0.09);
     --wa: #1EBE5D;
     --wa-dark: #169549;
 
-    --font-title: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
-    --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-title: 'Walkingrush', 'Allura', 'Great Vibes', cursive;
+    --font-body: 'BasicCommercial LT Light', 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -57,7 +57,7 @@
     content: '';
     position: absolute;
     inset: 22px;
-    border: 1px solid var(--gold-soft, rgba(201, 168, 106, 0.22));
+    border: 1px solid var(--gold-soft, rgba(238, 130, 165, 0.22));
     pointer-events: none;
 }
 
@@ -90,7 +90,7 @@
     width: 64px;
     height: 1px;
     background: var(--gold);
-    box-shadow: 0 0 14px rgba(201, 168, 106, 0.7);
+    box-shadow: 0 0 14px rgba(238, 130, 165, 0.7);
 }
 
 .category-hero-content p,
@@ -98,7 +98,7 @@
     font-family: var(--font-body);
     font-weight: 300;
     font-size: clamp(0.98rem, 2.4vw, 1.2rem);
-    color: rgba(253, 252, 251, 0.78);
+    color: rgba(255, 253, 253, 0.78);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.8;
@@ -147,14 +147,14 @@
     border: 1px solid var(--hairline);
     border-left: 3px solid var(--primary);
     border-radius: 14px;
-    box-shadow: 0 8px 26px rgba(20, 16, 27, 0.05);
+    box-shadow: 0 8px 26px rgba(38, 58, 48, 0.05);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-left-color 0.35s ease;
 }
 
 .benefit-item:hover {
     transform: translateY(-4px);
     border-left-color: var(--gold);
-    box-shadow: 0 14px 34px rgba(20, 16, 27, 0.1);
+    box-shadow: 0 14px 34px rgba(38, 58, 48, 0.1);
 }
 
 .benefit-item h3 {
@@ -186,7 +186,7 @@
     border-radius: 14px;
     text-align: center;
     border: 1px solid var(--hairline);
-    box-shadow: 0 6px 20px rgba(20, 16, 27, 0.05);
+    box-shadow: 0 6px 20px rgba(38, 58, 48, 0.05);
 }
 
 .price-item h4 {
@@ -256,7 +256,7 @@
     content: '';
     position: absolute;
     inset: 22px;
-    border: 1px solid rgba(201, 168, 106, 0.22);
+    border: 1px solid rgba(238, 130, 165, 0.22);
     border-radius: 12px;
     pointer-events: none;
 }
@@ -283,7 +283,7 @@
     font-size: 1.1rem;
     font-weight: 300;
     margin-bottom: 2rem;
-    color: rgba(253, 252, 251, 0.8);
+    color: rgba(255, 253, 253, 0.8);
     position: relative;
     z-index: 1;
 }
@@ -311,7 +311,7 @@
     background: linear-gradient(135deg, var(--gold), var(--gold-dark));
     color: var(--ink);
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(201, 168, 106, 0.4);
+    box-shadow: 0 12px 30px rgba(238, 130, 165, 0.4);
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -389,14 +389,14 @@
     padding: 1.6rem;
     border: 1px solid var(--hairline);
     border-radius: 16px;
-    box-shadow: 0 8px 26px rgba(20, 16, 27, 0.05);
+    box-shadow: 0 8px 26px rgba(38, 58, 48, 0.05);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     text-align: center;
 }
 
 .area-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 16px 38px rgba(20, 16, 27, 0.1);
+    box-shadow: 0 16px 38px rgba(38, 58, 48, 0.1);
 }
 
 .area-name {
